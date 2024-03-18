@@ -26,16 +26,16 @@ function Footer() {
                     <div className='col-md-1'></div>
                     <div className='col-md-4'>
                         <h5>CONTACT US!</h5>
-                        <div className='row'>
-                           <div className='col-md-4'>
-                           <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                           </div>
-                           <div className='col-md-4'>
-                           <i class="fab fa-tiktok"></i>
-                           </div>
-                           <div className='col-md-4'>
-                           <i class="fa fa-instagram" aria-hidden="true"></i>
-                           </div>
+                        <div className='imgFooters'>
+                            <div className='imgFooter1 imgFooter'>
+                                <img alt='' src='https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png'></img>
+                            </div>
+                            <div className='imgFooter2 imgFooter'>
+                                <img alt='' src='https://img.icons8.com/?size=48&id=118640&format=png'></img>
+                            </div>
+                            <div className='imgFooter3 imgFooter'>
+                                <img alt='' src='https://img.icons8.com/?size=48&id=32323&format=png'></img>
+                            </div>
                         </div>
                     </div>
                 </div>
