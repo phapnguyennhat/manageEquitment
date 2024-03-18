@@ -1,13 +1,91 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  box-sizing:border-box;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/******************* Heading ********************/
+
+.topHeader{
+  height:18vh;
+  background-color: #7DBACD;
 }
+
+#topHeaderElements{
+  margin-top:80px;
+}
+
+.topHeaderElement{
+  color:white;
+  border-radius: 10px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:5px 0;
+  transition:0.4s;
+}
+
+.topHeaderElement:hover{
+  background-color:#0d556b;
+}
+
+.signIn, .signUp{
+  background-color:#c97618;
+}
+
+/***************** End Heading *********************/
+
+
+
+/********************* Home ************************/
+
+
+
+/******************* End Home **********************/
+
+
+/********************* Footer **********************/
+
+.footer{
+  background-color:#495057;
+  height: 30vh;
+  color:white;
+  border-bottom:1px solid lightgray;
+}
+
+.toFlex{
+  display:flex;
+}
+
+.name{
+  margin:25px 0;
+  font-size: 28px;
+}
+
+.marginFooter{
+  margin-left:15px;
+}
+
+.toFlex i{
+  font-size: 22px;
+}
+
+.itemFooter{
+  margin-left:7px;
+}
+
+.endFooter{
+  height: 5vh;
+  background-color:#495057;
+}
+
+.endFooter div{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:10px;
+  color:rgb(218, 215, 215);
+}
+
+/******************* End Footer ********************/
