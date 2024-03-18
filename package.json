@@ -1,5 +1,5 @@
 {
-  "name": "manage_equitment",
+  "name": "itemmanagement",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
