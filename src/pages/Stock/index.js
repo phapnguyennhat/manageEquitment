@@ -1,3 +1,5 @@
-function Stock() {}
+function Stock() {
+  return;
+}
 
 export default Stock;
