@@ -1,9 +1,56 @@
 .homeWrapper{
   width: 100%;
+  display:flex;
+  justify-content: center;
 }
 
 .image{
   width:100%;
-  opacity:0.8;
+  opacity:1;
 }
 
+.homeContent{
+  margin:0 50px;
+  margin-top:10%;
+  position:absolute;
+  width:68%;
+  height:80%;
+  justify-content: center;
+}
+
+.webName{
+  background: linear-gradient(to right, #e7905e,#ef1e1e);
+  border-radius: 5%;
+  margin-top: 15%;
+  padding:10px 0;
+}
+
+.italic{
+  font-style: italic;
+  font-size: 18px;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.characters{
+  display:flex;
+  margin:15% auto;
+  width:70%;
+  justify-content: space-between;
+  height:14.3%;
+}
+
+.character{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:15%;
+  background-color: rgb(100, 149, 179);
+  border-radius: 5%;
+  transition:0.3s;
+  &:hover{
+    background-color:rgb(60, 133, 179);
+  }
+}
