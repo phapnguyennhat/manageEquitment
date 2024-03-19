@@ -3,7 +3,7 @@ function Header() {
     <div className="topHeader">
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div id='logo' className="col-md-4">
             <img
               alt=""
               src="https://mybk.hcmut.edu.vn/my/images/logo.png"
