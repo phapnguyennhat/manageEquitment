@@ -1,0 +1,27 @@
+.card{
+  width: 302px;
+  height: 402px;
+  margin: 10px;
+}
+
+.card-info{
+  text-align: left  ;
+}
+
+.card-info-img{
+  width: 100%;
+}
+
+.card-info-num{
+  outline: none;
+}
+
+.card-info-btn{
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  float: right;
+  margin-right: 30px;
+}

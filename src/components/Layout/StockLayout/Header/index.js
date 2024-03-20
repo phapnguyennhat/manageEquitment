@@ -26,7 +26,7 @@ function Header() {
         <div className={cx("item-user")}>
           <img
             className={cx("header__navbar-item-img")}
-            src="./user-solid.svg"
+            src="/assets/imgs/user-solid.svg"
             alt="not found"
           />
           <span>Nguyễn Nhật Pháp</span>
