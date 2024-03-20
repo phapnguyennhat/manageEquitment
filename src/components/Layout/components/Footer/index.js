@@ -11,25 +11,25 @@ function Footer() {
               <div className="address toFlex">
                 <i class="fa fa-map-marker itemFooter" aria-hidden="true"></i>
                 <p className="marginFooter">
-                  609-H6, trường Đại học Bách Khoa cơ sở 2, Dĩ An, Bình Dương
+                  Địa chỉ: 609-H6, trường Đại học Bách Khoa cơ sở 2, Dĩ An, Bình Dương
                 </p>
               </div>
               <div className="email toFlex">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <p className="marginFooter">dtn-khmt@hcmut.edu.vn</p>
+                <p className="marginFooter">Email: dtn-khmt@hcmut.edu.vn</p>
               </div>
               <div className="hotline toFlex">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <p className="marginFooter">0942.938.128</p>
+                <p className="marginFooter">Hotline: 0942.938.128</p>
               </div>
               <div className="website toFlex">
                 <i class="fa fa-globe" aria-hidden="true"></i>
-                <p className="marginFooter">https://cse.hcmut.edu.vn/en</p>
+                <p className="marginFooter">Website: https://cse.hcmut.edu.vn/en</p>
               </div>
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-4">
-              <h5>CONTACT US!</h5>
+              <h5 id='contactUs'>CONTACT US!</h5>
               <div className="imgFooters">
                 <div className="imgFooter1 imgFooter">
                   <img

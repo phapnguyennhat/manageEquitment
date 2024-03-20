@@ -5,35 +5,22 @@ const cx = classNames.bind(styles);
 
 function Home() {
   return (
-    <div className="home">
-      <div className={cx("container-img")}>
-        <div className="home1">
-          <img
-            className={cx("home__img")}
-            alt=""
-            src="https://lms.hcmut.edu.vn/pluginfile.php/3/theme_academi/slide3image/1710760830/sanbong.jpeg"
-          ></img>
+    <div className={cx('homeWrapper')}>
+      <img className={cx('image')} alt='' src='https://th.bing.com/th/id/R.7f6e8dcf36848ca41f6835b55e696765?rik=yVhTKS6%2b%2bOe7KQ&pid=ImgRaw&r=0'></img>
+      <div className={cx('homeContent')}>
+        <div className={cx('webName')}>
+          <h1>WEBSITE</h1>
+          <h1>QUẢN LÝ VẬT DỤNG</h1>
+          <h1>ĐOÀN - HỘI</h1>
+          <p className={cx('italic')}>"Uy tín tạo niềm tin"</p>
         </div>
-        <div className="home2">
-          <img
-            className={cx("home__img")}
-            alt=""
-            src="https://lms.hcmut.edu.vn/pluginfile.php/3/theme_academi/slide1image/1710760830/slbk.jpg"
-          ></img>
-          <img
-            className={cx("home__img")}
-            alt=""
-            src="https://th.bing.com/th/id/OIP.zLkWIO82DNql2E1FqhEiJwHaHT?rs=1&pid=ImgDetMain"
-          ></img>
-          <img
-            className={cx("home__img")}
-            alt=""
-            src="https://lms.hcmut.edu.vn/pluginfile.php/3/theme_academi/slide2image/1710760830/slbktv.jpg"
-          ></img>
+        <div className={cx('characters')}>
+          <div className={cx('character')}>UY TÍN</div>
+          <div className={cx('character')}>NHANH GỌN</div>
+          <div className={cx('character')}>DỄ DÀNG</div>
+          <div className={cx('character')}>TIỆN LỢI</div>
         </div>
-        <div className="home3">
-          <img alt="" src="" className={cx("home__img")}></img>
-        </div>
+
       </div>
     </div>
   );
