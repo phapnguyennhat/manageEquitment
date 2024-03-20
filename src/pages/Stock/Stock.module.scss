@@ -1,0 +1,62 @@
+.container{
+  margin: 20px;
+  padding: 20px;
+}
+
+.container__title{
+  font-size: 4rem;
+  margin: 20px;
+}
+
+.container__direction{  
+  display: flex;
+ justify-content: center;
+
+
+}
+
+.container__direction-img{
+  width: 15px;
+  margin: 0 6px;
+}
+
+.grid{
+  width: 978px;
+
+  margin: 0 auto;
+  
+}
+
+.grid-row{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.grid-card{
+  display: flex;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.btn{
+  background-color: transparent;
+  border: none;
+  margin: 0 8px;
+}
+
+.btn-select{
+  display: flex;
+  align-items: center;
+
+}
+
+.btn-add-icon{
+  width: 16px;
+  margin-left: 8px;
+}
+
+.btn-add{
+
+}
