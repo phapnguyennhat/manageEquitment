@@ -15,8 +15,14 @@
   z-index:999;
 }
 
+
 #logo{
   margin-top:7px;
+}
+
+a{
+  text-decoration: none;
+  color:white;
 }
 
 #topHeaderElements{

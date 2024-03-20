@@ -32,22 +32,28 @@ function Footer() {
               <h5 id='contactUs'>CONTACT US!</h5>
               <div className="imgFooters">
                 <div className="imgFooter1 imgFooter">
-                  <img
+                  <a href='https://www.facebook.com/BKCSE.Multimedia' target="_blank">
+                    <img
                     alt=""
                     src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png"
                   ></img>
+                  </a>
                 </div>
                 <div className="imgFooter2 imgFooter">
-                  <img
+                  <a href='https://www.tiktok.com/@csemultimedia' target="_blank">
+                    <img
                     alt=""
                     src="https://img.icons8.com/?size=48&id=118640&format=png"
                   ></img>
+                  </a>
                 </div>
                 <div className="imgFooter3 imgFooter">
-                  <img
+                  <a href='https://www.instagram.com/csemultimedia.hcmut/' target="_blank">
+                    <img
                     alt=""
                     src="https://img.icons8.com/?size=48&id=32323&format=png"
                   ></img>
+                  </a>
                 </div>
               </div>
             </div>
