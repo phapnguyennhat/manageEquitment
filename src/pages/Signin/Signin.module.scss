@@ -1,0 +1,126 @@
+.signWrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2000;
+    position:relative;
+}
+
+.signIn {
+    background-color: white;
+    width: 55%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    transition:0.4s;
+}
+
+.signIn_left {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: start;
+    display:flex;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    img{
+       width: 100%;
+    }
+}
+
+.signIn_right {
+    width: 50%;
+    height: 100%;
+
+    .signIn_right_content {
+        margin-top: 14%;
+        position: relative;
+        height: 70%;
+
+        .signIn_close {
+            position: absolute;
+            top: -13%;
+            right: 5%;
+            font-size: 200%;
+            color:black;
+        }
+
+        h3{
+            font-size: 250%;
+            margin:8% 0;
+        }
+
+        input{
+            border-style: none;
+            padding:2% 3%;
+            border-bottom: 2px solid purple;
+            width: 70%;
+            margin:3% 0;
+            overflow: hidden;
+            margin-bottom:3%;
+        }
+
+
+        .signIn_right_button{
+            margin-top:10%;
+            width: 85%;
+            height: 20%;
+
+            button{
+                margin-left:15%;
+                width: 90%;
+                height: 50%;
+                border-style: none;
+                background: linear-gradient(50deg, rgb(159, 125, 203), rgb(126, 42, 190));
+                font-style: bold;
+                font-family: segoe ui;
+                font-size: 100%;
+                border-radius: 5px;
+                margin-bottom:2%;
+                color:white;
+            }
+
+            i{
+                position:absolute;
+                font-size: 270%;
+                top:79.5%;
+                right:14%;
+            }
+
+            .above{
+                top:67.5%;
+                right:14%;  
+              }
+
+            
+        }
+
+        .signUp_in_signIn{
+            margin-top:3%;
+            width: 100%;
+            height: 10%;
+            display:flex;
+            justify-content: center;
+
+            p{
+                font-size: 75%;
+            }
+
+           
+        }
+
+        button{
+            width: 40%;
+            padding:2% 0;
+            border-style:none ;
+            border-radius: 5px;
+            background-color: rgb(176, 163, 135);
+            color:white;
+        }
+    }
+}

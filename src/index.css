@@ -29,6 +29,11 @@ a{
   margin-top:80px;
 }
 
+.innerSignin{
+  width: 100%;
+  height: 100%;
+}
+
 
 .topHeaderElement{
   color:white;
@@ -46,18 +51,11 @@ a{
 }
 
 .signIn, .signUp{
-  background-color:#c36f0f;
+  background-color:#4A2F2F;
 }
 
 /***************** End Heading *********************/
 
-
-
-/********************* Home ************************/
-
-
-
-/******************* End Home **********************/
 
 
 /********************* Footer **********************/
