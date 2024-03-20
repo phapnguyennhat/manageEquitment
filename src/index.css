@@ -10,6 +10,9 @@
 .topHeader{
   height:20vh;
   background-color: #4da5c0;
+  position:fixed;
+  width:100%;
+  z-index:999;
 }
 
 #logo{
@@ -37,7 +40,7 @@
 }
 
 .signIn, .signUp{
-  background-color:#c97618;
+  background-color:#c36f0f;
 }
 
 /***************** End Heading *********************/
@@ -88,7 +91,7 @@
 }
 
 .name{
-  background: linear-gradient(to right, #e24099ad,#8d1092);
+  background: linear-gradient(to right, #4daf54, #3d8880);
   border-radius: 5px;
   padding:10px 0;
 }
