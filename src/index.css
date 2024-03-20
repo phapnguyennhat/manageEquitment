@@ -8,13 +8,21 @@
 /******************* Heading ********************/
 
 .topHeader{
-  height:18vh;
-  background-color: #7DBACD;
+  height:20vh;
+  background-color: #4da5c0;
+  position:fixed;
+  width:100%;
+  z-index:999;
+}
+
+#logo{
+  margin-top:7px;
 }
 
 #topHeaderElements{
   margin-top:80px;
 }
+
 
 .topHeaderElement{
   color:white;
@@ -26,12 +34,13 @@
   transition:0.4s;
 }
 
+
 .topHeaderElement:hover{
   background-color:#0d556b;
 }
 
 .signIn, .signUp{
-  background-color:#c97618;
+  background-color:#c36f0f;
 }
 
 /***************** End Heading *********************/
@@ -49,7 +58,7 @@
 
 .footer{
   background-color:#495057;
-  height: 30vh;
+  height: 30%;
   color:white;
   border-bottom:1px solid lightgray;
 }
@@ -59,7 +68,7 @@
 }
 
 .name{
-  margin:25px 0;
+  margin:15px 0;
   font-size: 28px;
 }
 
@@ -67,9 +76,24 @@
   margin-left:15px;
 }
 
+.address{
+  margin-left:5px;
+}
+
+#contactUs{
+  font-size: 22px;
+  margin-left:10px;
+}
+
 .toFlex i{
   font-size: 22px;
   margin-left:30px;
+}
+
+.name{
+  background: linear-gradient(to right, #4daf54, #3d8880);
+  border-radius: 5px;
+  padding:10px 0;
 }
 
 .itemFooter{
@@ -77,7 +101,7 @@
 }
 
 .endFooter{
-  height: 5vh;
+  height: 5%;
   background-color:#495057;
 }
 
