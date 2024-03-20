@@ -1,0 +1,34 @@
+.card{
+display: flex;
+width: 100%;
+}
+
+.card-img{
+  img{
+    width: 168px;
+  }
+  margin-right: 4px;
+  border: 2px solid #bab9b9;
+
+}
+
+.card-info{
+  text-align: left;
+}
+
+.card-info-name{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #6f6d6d;
+}
+
+.card-info-sl,
+.card-info-btn{
+  color: #8A8A8A;
+}
+
+.card-info-btn{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
