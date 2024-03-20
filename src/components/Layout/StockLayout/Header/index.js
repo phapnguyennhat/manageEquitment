@@ -20,7 +20,11 @@ function Header() {
             Kho
           </Link>
         </li>
-        <li className={cx("header__navbar-item")}>Đăng ký vật dụng</li>
+        <li className={cx("header__navbar-item")}>
+          <Link className={cx("item-link")} to="/register">
+            Đăng ký vật dụng
+          </Link>
+        </li>
         <li className={cx("header__navbar-item")}>Danh sách đăng ký</li>
 
         <div className={cx("item-user")}>

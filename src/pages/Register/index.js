@@ -1,9 +1,20 @@
 import classNames from "classnames/bind";
 import styles from "./Register.module.scss";
 import CardCart from "~/components/CardCart";
+import { useEffect, useState } from "react";
 
 const cx = classNames.bind(styles);
 function Register() {
+  const [posts, setPosts] = useState([]);
+  var postApi = "assets/databases/cart.json";
+  useEffect(() => {
+    fetch(postApi)
+      .then((response) => response.json())
+      .then((posts) => {
+        setPosts(posts);
+      });
+  }, []);
+
   return (
     <div className={cx("container")}>
       <h3 className={cx("container__title")}>Đăng ký vật dụng</h3>
@@ -69,29 +80,47 @@ function Register() {
           <span className={cx("table-head-item")}>Vật Dụng</span>
           <span className={cx("table-head-item")}>Thời Hạn</span>
           <span className={cx("table-head-item")}>Quantity</span>
-          <span className={cx("table-head-item")}>Số Lượng Lấy</span>
+          <span className={cx("table-head-item")}>Select</span>
         </div>
         <ul className={cx("container-list-item")}>
-          <li className={cx("container-item")}>
-            <span className={cx("container-item__item")}>
-              <CardCart
-                src="/assets/imgs/table.jpg"
-                quantity="2"
-                name="Bàn học gỗ tốt chất lượng cao cấp"
-              />
-            </span>
-            <span className={cx("container-item__item")}>8 ngày</span>
-            <span className={cx("container-item__item")}>
-              <input
-                type="number"
-                min="0"
-                max="20"
-                className={cx("item-input")}
-              />
-            </span>
-            <span className={cx("container-item__item")}></span>
-          </li>
+          {posts.map((item) => (
+            <li className={cx("container-item")}>
+              <span className={cx("container-item__item")}>
+                <CardCart
+                  src={item.src}
+                  quantity={item.quantity}
+                  name={item.name}
+                />
+              </span>
+              <span className={cx("container-item__item")}>8 ngày</span>
+              <span className={cx("container-item__item")}>
+                <input
+                  type="number"
+                  min="0"
+                  max={item.quantity}
+                  className={cx("item-input")}
+                />
+              </span>
+              <span className={cx("container-item__item")}>
+                <input type="checkbox" className={cx("item-checkbox")} />
+              </span>
+            </li>
+          ))}
         </ul>
+
+        <div className={cx("confirm")}>
+          <div className={cx("wrap-term")}>
+            <input type="checkbox" className={cx("confirm-checkbox")} />
+            <span className={cx("confirm-msg")}>
+              Tôi Đồng Ý Với Điều Khoản Cam Đoan Sẽ Trả Đủ
+            </span>
+          </div>
+          <div className={cx("wrap-total")}>
+            <label>Total: </label>
+            <span>10</span>
+          </div>
+          <button className={cx("confirm-submit")}>Submit</button>
+        </div>
       </div>
     </div>
   );
