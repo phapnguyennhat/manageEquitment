@@ -30,6 +30,12 @@ function Header() {
             alt="not found"
           />
           <span>Nguyễn Nhật Pháp</span>
+          <img
+            src="/assets/imgs/cart-shopping-solid.svg"
+            alt="not found"
+            className={cx("header__navbar-item-img")}
+          />
+          <span className={cx("item-user-notice")}>3</span>
         </div>
       </ul>
     </div>
