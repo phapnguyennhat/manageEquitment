@@ -6,14 +6,18 @@ import { useEffect, useState } from "react";
 const cx = classNames.bind(styles);
 function Register() {
   const [posts, setPosts] = useState([]);
-  var postApi = "assets/databases/cart.json";
-  useEffect(() => {
-    fetch(postApi)
-      .then((response) => response.json())
-      .then((posts) => {
-        setPosts(posts);
-      });
-  }, []);
+  const [carts, setCarts] = useState(() => {
+    const storageCarts = JSON.parse(localStorage.getItem("carts"));
+    return storageCarts ?? [];
+  });
+  // var postApi = "assets/databases/cart.json";
+  // useEffect(() => {
+  //   fetch(postApi)
+  //     .then((response) => response.json())
+  //     .then((posts) => {
+  //       setPosts(posts);
+  //     });
+  // }, []);
 
   return (
     <div className={cx("container")}>
@@ -83,7 +87,7 @@ function Register() {
           <span className={cx("table-head-item")}>Select</span>
         </div>
         <ul className={cx("container-list-item")}>
-          {posts.map((item) => (
+          {carts.map((item) => (
             <li className={cx("container-item")}>
               <span className={cx("container-item__item")}>
                 <CardCart

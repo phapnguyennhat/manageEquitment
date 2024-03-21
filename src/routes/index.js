@@ -25,10 +25,8 @@ const publicRoutes = [
     props: { typeUser: "admin" },
   },
   { path: "/a", component: Home, layout: StockLayout },
-  { path: "/stock", component: Stock, layout: StockLayout },
   { path: "/signin", component: Signin },
   { path: "/signup", component: Signup },
-  { path: "/register", component: Register, layout: StockLayout },
   { path: "/listregister", component: Listregister, layout: StockLayout },
 ];
 
