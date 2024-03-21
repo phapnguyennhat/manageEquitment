@@ -8,6 +8,7 @@
   color: #fff8fa;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .header__logo{
@@ -42,20 +43,36 @@
   color: #fff8fa;
 }
 
-.header__navbar-item:nth-child(2){
-  background-color: #0d556b;
-}
+// .header__navbar-item:nth-child(2){
+//   background-color: #0d556b;
+// }
 
 .item-user{
   display: flex;
   align-items: center;
   padding-left: 8px;
+  position: relative;
   span{
-    padding-left: 8px;
     font-size: 1.6rem;
+    line-height: 0;
   }
+}
+
+
+.item-user-notice{
+  
+  position: absolute;
+  background-color: #fff8fa;
+  color: #7DBACD;
+  border-radius: 10px;
+  padding: 8px 7px;
+  margin: 0;
+  top: -7px;
+  right: -7px;
+  
 }
 
 .header__navbar-item-img{
   width: 20px;
+  margin: 0 8px;
 }

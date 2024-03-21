@@ -11,7 +11,7 @@ function Header() {
       </div>
       <ul className={cx("header__navbar")}>
         <li className={cx("header__navbar-item")}>
-          <Link className={cx("item-link")} to="/">
+          <Link className={cx("item-link")} to="/a">
             Trang chủ
           </Link>
         </li>
@@ -20,9 +20,16 @@ function Header() {
             Kho
           </Link>
         </li>
-        <li className={cx("header__navbar-item")}>Đăng ký vật dụng</li>
-        <li className={cx("header__navbar-item")}>Danh sách đăng ký</li>
-
+        <li className={cx("header__navbar-item")}>
+          <Link className={cx("item-link")} to="/register">
+            Đăng ký vật dụng
+          </Link>
+        </li>
+        <li className={cx("header__navbar-item")}>
+          <Link className={cx("item-link")} to="/listregister">
+            Danh sách đăng ký
+          </Link>
+        </li>
         <div className={cx("item-user")}>
           <img
             className={cx("header__navbar-item-img")}
@@ -30,6 +37,12 @@ function Header() {
             alt="not found"
           />
           <span>Nguyễn Nhật Pháp</span>
+          <img
+            src="/assets/imgs/cart-shopping-solid.svg"
+            alt="not found"
+            className={cx("header__navbar-item-img")}
+          />
+          <span className={cx("item-user-notice")}>3</span>
         </div>
       </ul>
     </div>

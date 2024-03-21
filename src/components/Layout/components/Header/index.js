@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
-      <div className="topHeader">
+    <div className="topHeader">
       <div className="container">
         <div className="row">
           <div id='logo' className="col-md-4">
@@ -12,12 +14,26 @@ function Header() {
           <div className="col-md-1"></div>
           <div className="col-md-7">
             <div id="topHeaderElements" className="row">
-              <div className="col-md-1 topHeaderElement">Nhà</div>
-              <div className="col-md-1 topHeaderElement">Kho</div>
-              <div className="col-md-3 topHeaderElement">Đăng Ký Vật Dụng</div>
-              <div className="col-md-3 topHeaderElement">Danh Sách Đăng Ký</div>
-              <div className="col-md-2 topHeaderElement signIn">Đăng Nhập</div>
-              <div className="col-md-2 topHeaderElement signUp">Đăng Ký</div>
+              <Link to='/' className="col-md-1 topHeaderElement">
+                <div>Nhà</div>
+              </Link>
+
+              <Link className="col-md-1 topHeaderElement" to='/signin'>
+                <div>Kho</div>
+              </Link>
+              <Link className="col-md-3 topHeaderElement" to='/signin'>
+                <div>Đăng Ký Vật Dụng</div>
+              </Link>
+
+              <Link to='/signin' className="col-md-3 topHeaderElement">
+                <div>Danh sách đăng ký</div>
+              </Link>
+              <Link to='/signin' className="col-md-2 topHeaderElement signIn">
+                <div className='innersignIn'>Đăng nhập</div>
+              </Link>
+              <Link to='/signup' className="col-md-2 topHeaderElement signUp">
+                <div className='innersignUp'>Đăng ký</div>
+              </Link>
             </div>
           </div>
         </div>
