@@ -47,7 +47,10 @@ const [password, setPassword] = useState('')
                                 
                             </div>
                             <div className={cx('continueAdmin')}>
-                                <button>Tiếp tục với tư cách quản trị viên</button>
+                                <button>{(email == "admin123@hcmut.edu.vn" && password == "123456789") ? 
+                                <Link to='/a'>Tiếp tục với tư cách quản trị viên</Link> :
+                                'Tiếp tục với tư cách quản trị viên'    
+                            }</button>
                                 <i>
                                     <i className={cx("fa fa-angle-right")} aria-hidden="true"></i>
                                 </i>
