@@ -1,0 +1,55 @@
+.listRegister {
+    width: 100%;
+    margin-top: 12%;
+
+    .contentWrapper {
+        h1 {
+            font-size: 4rem;
+        }
+
+        p{
+            i{
+                padding:0 1%;
+                font-size: 150%;
+            }
+        }
+
+        .aboveList{
+            font-size: 120%;
+            text-align: start;
+            width: 52%;
+            margin:0 auto;
+            margin-top:3%;
+    
+            
+        }
+
+        .toFlex{
+            display:flex;
+            justify-content: center;
+        }
+
+        .listWrapper{
+            width: 55%;
+            padding:1% 2%;
+            border-radius: 5px;
+            
+
+            p{
+                text-align: start;
+                background-color: bisque;
+                border-radius: 5px;
+                padding:0.5% 1%;
+            }
+        }
+    }
+}
+
+.list{
+    .listHeader{
+        padding:1% 0;
+        border: 1px solid gray;
+        color:white;
+        background-color:rgb(7, 83, 133);
+    }
+}

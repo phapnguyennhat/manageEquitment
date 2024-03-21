@@ -11,7 +11,7 @@ function Header() {
       </div>
       <ul className={cx("header__navbar")}>
         <li className={cx("header__navbar-item")}>
-          <Link className={cx("item-link")} to="/">
+          <Link className={cx("item-link")} to="/a">
             Trang chủ
           </Link>
         </li>
@@ -25,8 +25,11 @@ function Header() {
             Đăng ký vật dụng
           </Link>
         </li>
-        <li className={cx("header__navbar-item")}>Danh sách đăng ký</li>
-
+        <li className={cx("header__navbar-item")}>
+          <Link className={cx("item-link")} to="/listregister">
+            Danh sách đăng ký
+          </Link>
+        </li>
         <div className={cx("item-user")}>
           <img
             className={cx("header__navbar-item-img")}
