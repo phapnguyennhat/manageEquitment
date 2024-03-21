@@ -71,6 +71,7 @@
             margin-top:5%;
             width: 85%;
             height: 10%;
+            display:flex;
 
             button{
                 width: 90%;
@@ -83,13 +84,19 @@
                 border-radius: 5px;
                 margin-left:14%;
                 color:white;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
             }
 
             i{
-                position:absolute;
-                font-size: 270%;
-                top:90%;
-                right:15%;
+                font-size: 130%;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(126, 42, 190);
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                color:white;
             }
             
         }
