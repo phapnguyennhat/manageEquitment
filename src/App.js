@@ -30,7 +30,7 @@ function App() {
                 path={route.path}
                 element={
                   <Layout>
-                    <Page />
+                    <Page {...route.props} />
                   </Layout>
                 }
               />

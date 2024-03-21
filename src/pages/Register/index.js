@@ -92,7 +92,7 @@ function Register() {
                   name={item.name}
                 />
               </span>
-              <span className={cx("container-item__item")}>8 ngày</span>
+              <span className={cx("container-item__item")}>{item.time}</span>
               <span className={cx("container-item__item")}>
                 <input
                   type="number"

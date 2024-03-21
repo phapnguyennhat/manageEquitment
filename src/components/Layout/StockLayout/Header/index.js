@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ quantityCart, nameUser }) {
   return (
     <div className={cx("header")}>
       <div className={cx("header__logo")}>
@@ -33,13 +33,15 @@ function Header() {
             src="/assets/imgs/user-solid.svg"
             alt="not found"
           />
-          <span>Nguyễn Nhật Pháp</span>
-          <img
-            src="/assets/imgs/cart-shopping-solid.svg"
-            alt="not found"
-            className={cx("header__navbar-item-img")}
-          />
-          <span className={cx("item-user-notice")}>3</span>
+          <span>{nameUser}</span>
+          <div className={cx("header-cart-wrap")}>
+            <img
+              src="/assets/imgs/cart-shopping-solid.svg"
+              alt="not found"
+              className={cx("header__navbar-item-img")}
+            />
+            <span className={cx("item-user-notice")}>{quantityCart}</span>
+          </div>
         </div>
       </ul>
     </div>

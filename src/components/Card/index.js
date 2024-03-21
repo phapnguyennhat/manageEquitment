@@ -4,11 +4,9 @@ import { useState } from "react";
 
 const cx = classNames.bind(styles);
 
-function Card({ src, name, quantity }) {
-  const [soluong, setSoluong] = useState(quantity);
-
-  let msg = `Còn ${soluong}`;
-  if (soluong === 0) {
+function Card(props) {
+  let msg = `Còn ${props.quantity}`;
+  if (props.quantity === 0) {
     msg = "Hết";
   }
 
@@ -19,10 +17,10 @@ function Card({ src, name, quantity }) {
   return (
     <div className={cx("card")}>
       <div className={cx("card-info")}>
-        <img src={src} alt="not found" className={cx("card-info-img")} />
-        <h3 className={cx("card-info-name")}>{name}</h3>
+        <img src={props.src} alt="not found" className={cx("card-info-img")} />
+        <h3 className={cx("card-info-name")}>{props.name}</h3>
         <div className={cx("card-info-msg")}>{msg}</div>
-        <div style={{ color: "red" }}>Thời hạn mượn 7 ngày</div>
+        <div style={{ color: "red" }}>Thời hạn mượn {props.time}</div>
         <button className={cx("card-info-btn")} onClick={handleAdd}>
           Thêm vào giỏ hàng
         </button>

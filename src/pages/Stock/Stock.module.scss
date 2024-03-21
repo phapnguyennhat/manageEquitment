@@ -46,6 +46,64 @@
   margin: 0 8px;
 }
 
+.wrap-btn-select{
+  position: relative;
+  width: 150px;
+
+  &:hover{
+    cursor: pointer;
+    .list-option{
+      display: block;
+    }
+  }
+}
+
+.wrap-select-icon{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+.list-option{
+  text-align: left;
+  list-style: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 4px;
+  background-color: rgb(214, 209, 209);
+  border-radius: 4px;
+  display: none;
+  animation: fadeIn ease-in 0.2s;
+}
+
+.option-item{
+  padding-left: 8px;
+  padding-top:8px;
+  
+
+  &:hover{
+    background-color: bisque;
+    cursor: pointer;
+  }
+}
+
+
+
+
 .btn-select{
   display: flex;
   align-items: center;
@@ -59,4 +117,8 @@
 
 .btn-add{
 
+}
+
+.btn-add--disabled{
+  display: none;
 }
