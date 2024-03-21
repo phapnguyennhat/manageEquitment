@@ -1,5 +1,7 @@
 import Home from "~/pages/Home";
 import Stock from "~/pages/Stock";
+import Signin from "~/pages/Signin"
+import Signup from "~/pages/Signup"
 import Register from "~/pages/Register";
 import { StockLayout } from "~/components/Layout";
 
@@ -8,6 +10,8 @@ import { StockLayout } from "~/components/Layout";
 const publicRoutes = [
   { path: "/", component: Home },
   { path: "/stock", component: Stock, layout: StockLayout },
+  { path: "/signin", component: Signin},
+  { path: "/signup", component: Signup},
   { path: "/register", component: Register, layout: StockLayout },
 ];
 
