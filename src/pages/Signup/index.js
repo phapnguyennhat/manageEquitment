@@ -25,7 +25,9 @@ function Signup() {
                         </div>
                         <div className={cx('signUp_left_button')}>
                             <button>Xác nhận đăng ký</button>
-                            <i className={cx("fa fa-angle-right")} aria-hidden="true"></i>
+                            <i>
+                               <i className={cx("fa fa-angle-right")} aria-hidden="true"></i> 
+                            </i>
                         </div>
                         <div className={cx('signIn_in_signUp')}>
                             <p>Hoặc đã có tài khoản</p>

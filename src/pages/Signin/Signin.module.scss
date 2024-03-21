@@ -67,41 +67,70 @@
 
 
         .signIn_right_button{
+            margin-left:8.5%;
             margin-top:10%;
             width: 85%;
             height: 20%;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
 
-            button{
-                margin-left:15%;
-                width: 90%;
-                height: 50%;
-                border-style: none;
-                background: linear-gradient(50deg, rgb(159, 125, 203), rgb(126, 42, 190));
-                font-style: bold;
-                font-family: segoe ui;
-                font-size: 100%;
-                border-radius: 5px;
-                margin-bottom:2%;
-                color:white;
+            .continue{
+                width: 85%;
+                display:flex;
+                align-items: center;
+
+                button{
+                    width: 100%;
+                    height: 100%;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    background: linear-gradient(50deg, rgb(159, 125, 203), rgb(126, 42, 190));
+                }
+
+                i{
+                    height: 100%;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background-color: rgb(126, 42, 190);
+                    font-size: 140%;
+                    display:flex;
+                    align-items: center;
+                    color:white;
+                }
             }
 
-            i{
-                position:absolute;
-                font-size: 270%;
-                top:79.5%;
-                right:14%;
-            }
+            .continueAdmin{
+                width: 85%;
+                display:flex;
+                align-items: center;
+                margin-top:5%;
 
-            .above{
-                top:67.5%;
-                right:14%;  
-              }
+                button{
+                    width: 100%;
+                    height: 100%;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    background: linear-gradient(50deg, rgb(159, 125, 203), rgb(126, 42, 190));
+                }
+
+                i{
+                    height: 100%;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    background-color: rgb(126, 42, 190);
+                    font-size: 140%;
+                    display:flex;
+                    align-items: center;
+                    color:white;
+                }
+            }
 
             
         }
 
         .signUp_in_signIn{
-            margin-top:3%;
+            margin-top:6%;
             width: 100%;
             height: 10%;
             display:flex;
