@@ -1,94 +1,142 @@
 [
-  { "src": "/assets/imgs/table.jpg", "name": "Bàn học gỗ tốt", "quantity": 10 },
-  { "src": "/assets/imgs/bang_den.jpg", "name": "Bảng đen", "quantity": 10 },
+  {
+    "src": "/assets/imgs/table.jpg",
+    "name": "Bàn học gỗ tốt",
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
+  },
+  {
+    "src": "/assets/imgs/bang_den.jpg",
+    "name": "Bảng đen",
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
+  },
   {
     "src": "/assets/imgs/bo_dam.jpg",
     "name": "Bộ đàm không dây",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Sự kiện"
   },
   {
     "src": "/assets/imgs/casio570.jpg",
     "name": "Máy tính casio 570",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
   },
   {
     "src": "/assets/imgs/den_day_decor.jpg",
     "name": "Đèn dây trang trí",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   },
   {
     "src": "/assets/imgs/ghe_cong_thai_hoc.jpg",
     "name": "Ghế công thái học",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
   },
   {
     "src": "/assets/imgs/bo_dam.jpg",
     "name": "Bộ đàm không dây",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Sự kiện"
   },
   {
     "src": "/assets/imgs/ke_de_ho_so.jpg",
     "name": "Kệ để hồ sơ",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
   },
   {
     "src": "/assets/imgs/ke_lon.jpg",
     "name": "Kệ để hồ sơ cỡ lớn",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
   },
   {
     "src": "/assets/imgs/khung_poster.jpg",
     "name": "Khung poster",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   },
   {
     "src": "/assets/imgs/laptop.jpg",
     "name": "Laptop hãng HP",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Sự kiện"
   },
   {
     "src": "/assets/imgs/light_decor.jpg",
     "name": "Bóng đèn trang trí vàng",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   },
   {
     "src": "/assets/imgs/tu_ho_so.jpg",
     "name": "Tủ đựng hồ sơ",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Văn phòng phẩm"
   },
   {
     "src": "/assets/imgs/fan.jpg",
     "name": "Quạt cây hiệu Senko",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Thiết bị"
   },
   {
     "src": "/assets/imgs/chau_cay.jpg",
     "name": "Chậu cây hình con vật",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   },
   {
     "src": "/assets/imgs/gundam.jpg",
     "name": "Mô hình gundam",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   },
   {
     "src": "/assets/imgs/loa_lon.jpg",
     "name": "Loa thùng cỡ lớn",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Sự kiện"
   },
   {
     "src": "/assets/imgs/loa_nho.jpg",
     "name": "Loa nhỏ gắn vào máy tính",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Thiết bị"
   },
   {
     "src": "/assets/imgs/quat_mini.jpg",
     "name": "Quạt mini chạy bằng pin",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Thiết bị"
   },
   {
     "src": "/assets/imgs/quat_tay.jpg",
     "name": "Quạt tay phong cách kiểu dáng",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày",
+    "tag": "Đồ trang trí"
   }
 ]

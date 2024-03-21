@@ -8,6 +8,17 @@
   text-align: left  ;
 }
 
+.card-info-name{
+  color: #333;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.card-info-msg{
+  color: #666;
+  font-size: 1.4rem;
+}
+
 .card-info-img{
   width: 100%;
   border: 2px solid #bab9b9;
@@ -25,5 +36,9 @@
   border: none;
   float: right;
   margin-right: 26px;
+
+  &:hover{
+    background-color: #0d556b;
+  }
 }
 
