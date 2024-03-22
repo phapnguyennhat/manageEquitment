@@ -1,9 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Card.module.scss";
 import { useState } from "react";
-import { json } from "react-router-dom";
 import AddSuccess from "../AddSuccess";
-import { faLessThanEqual } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
 
@@ -28,12 +26,13 @@ function Card(props) {
 
   const handleAdd = () => {
     hideDiv();
-    const storageCarts = JSON.parse(localStorage.getItem("carts"));
-    setCarts(storageCarts ?? []);
+    const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+    setCarts(storageCarts);
 
-    console.log(carts);
+    // console.log(carts);
     // console.log(props);
     // console.log(carts.includes(props));
+
     setCarts((prev) => {
       const newCarts = [...prev, props];
       const jsonCarts = JSON.stringify(newCarts);

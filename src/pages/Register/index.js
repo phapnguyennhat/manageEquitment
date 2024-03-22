@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Register.module.scss";
 import CardCart from "~/components/CardCart";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Register() {
@@ -18,6 +18,16 @@ function Register() {
   //       setPosts(posts);
   //     });
   // }, []);
+  const [displayTerm, setDisplayTerm] = useState(false);
+  function handleSubmit() {
+    const confirm_checkbox = document.getElementById("confirm-checkbox");
+    if (confirm_checkbox.checked === false) {
+      console.log("ban can chon vao day");
+      setDisplayTerm(true);
+    } else {
+      setDisplayTerm(false);
+    }
+  }
 
   return (
     <div className={cx("container")}>
@@ -87,26 +97,16 @@ function Register() {
           <span className={cx("table-head-item")}>Select</span>
         </div>
         <ul className={cx("container-list-item")}>
-          {carts.map((item) => (
+          {carts.map((item, index) => (
             <li className={cx("container-item")}>
               <span className={cx("container-item__item")}>
                 <CardCart
+                  key={index}
                   src={item.src}
                   quantity={item.quantity}
                   name={item.name}
+                  time={item.time}
                 />
-              </span>
-              <span className={cx("container-item__item")}>{item.time}</span>
-              <span className={cx("container-item__item")}>
-                <input
-                  type="number"
-                  min="0"
-                  max={item.quantity}
-                  className={cx("item-input")}
-                />
-              </span>
-              <span className={cx("container-item__item")}>
-                <input type="checkbox" className={cx("item-checkbox")} />
               </span>
             </li>
           ))}
@@ -114,16 +114,25 @@ function Register() {
 
         <div className={cx("confirm")}>
           <div className={cx("wrap-term")}>
-            <input type="checkbox" className={cx("confirm-checkbox")} />
+            <input
+              type="checkbox"
+              className={cx("confirm-checkbox")}
+              id="confirm-checkbox"
+            />
             <span className={cx("confirm-msg")}>
               Tôi Đồng Ý Với Điều Khoản Cam Đoan Sẽ Trả Đủ
             </span>
           </div>
+          {displayTerm && (
+            <div className={cx("click-here")}>Bạn cần chọn vào đây!</div>
+          )}
           <div className={cx("wrap-total")}>
             <label>Total: </label>
             <span>10</span>
           </div>
-          <button className={cx("confirm-submit")}>Submit</button>
+          <button className={cx("confirm-submit")} onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
       </div>
     </div>

@@ -114,8 +114,9 @@ function Stock(props) {
           )}
         </div>
         <div className={cx("grid-card")}>
-          {displayStock.map((item) => (
+          {displayStock.map((item, index) => (
             <Card
+              key={index}
               src={item.src}
               name={item.name}
               quantity={item.quantity}

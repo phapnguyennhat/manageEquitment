@@ -1,8 +1,14 @@
 .card{
-display: flex;
-width: 100%;
+ width: 100%;
+ display:  flex;
+ text-align: left;
+ margin-top: 20px;
 }
 
+.wrap-card{
+  display: flex;
+  flex: 2;
+}
 .card-img{
   img{
     width: 168px;
@@ -14,6 +20,7 @@ width: 100%;
 
 .card-info{
   text-align: left;
+  margin-left: 8px;
 }
 
 .card-info-name{
@@ -31,4 +38,27 @@ width: 100%;
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.cart-time{
+  flex: 1;
+  color: #8A8A8A;
+
+}
+
+.cart-num{
+  flex: 1;
+}
+
+.cart-num-input{
+  color: #8A8A8A;
+  outline: none;
+  border: 2px solid #bab9b9;
+  // width: 90px;
+}
+
+
+.cart-checkbox{
+  flex: 1;
+  text-align: right;
 }
