@@ -19,26 +19,40 @@ function Card(props) {
     msg = "Hết";
   }
 
-  const [carts, setCarts] = useState(() => {
-    const storageCarts = JSON.parse(localStorage.getItem("carts"));
-    return storageCarts ?? [];
-  });
+  // const [carts, setCarts] = useState(() => {
+  //   const storageCarts = JSON.parse(localStorage.getItem("carts"));
+  //   return storageCarts ?? [];
+  // });
 
   const handleAdd = () => {
     hideDiv();
-    const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
-    setCarts(storageCarts);
+    // const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+    // setCarts(storageCarts);
 
+    // // console.log(carts);
+    // // console.log(props);
+    // // console.log(carts.includes(props));
     // console.log(carts);
-    // console.log(props);
-    // console.log(carts.includes(props));
 
-    setCarts((prev) => {
-      const newCarts = [...prev, props];
-      const jsonCarts = JSON.stringify(newCarts);
-      localStorage.setItem("carts", jsonCarts);
-      return newCarts;
-    });
+    // setCarts((prev) => {
+    //   const newCarts = [...prev, { ...props, getSL: 0, check: false }];
+    //   const jsonCarts = JSON.stringify(newCarts);
+    //   localStorage.setItem("carts", jsonCarts);
+    //   return newCarts;
+    // });
+    const storageCarts = localStorage.getItem("carts");
+    var carts = storageCarts ? JSON.parse(storageCarts) : [];
+    var item = carts.find((item) => item.name === props.name);
+    var sl;
+    if (item) {
+      carts = carts.filter((item) => item.name !== props.name);
+      sl = item.getSL + 1;
+      carts = [...carts, { ...props, getSL: sl, check: false }];
+    } else {
+      carts = [...carts, { ...props, getSL: 1, check: false }];
+    }
+
+    localStorage.setItem("carts", JSON.stringify(carts));
   };
 
   return (

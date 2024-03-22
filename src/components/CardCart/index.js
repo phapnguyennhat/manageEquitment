@@ -4,19 +4,53 @@ import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function CardCart(props) {
-  // const [value, setValue] = useState("");
   const [display, setDisplay] = useState(true);
-  // console.log(value);
-  // const handleChange = (event) => {
-  //   const value = event.target.value;
-  //   console.log(value);
-  //   setInputValue(value);
-  //   props.onChange(value);
-  // };
+
   let msg = `Còn ${props.quantity}`;
   if (props.quantity === 0) {
     msg = "Hết";
   }
+  let storageCarts;
+  const [numInput, setNumInput] = useState(props.getSL);
+  const [check, setCheck] = useState(props.check);
+  // const [carts, setCarts] = useState(() => {
+  //   storageCarts = JSON.parse(localStorage.getItem("carts"));
+  //   return storageCarts ?? [];
+  // });
+
+  const handleRemove = () => {
+    storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+    storageCarts = storageCarts.filter((item) => item.name !== props.name);
+    localStorage.setItem("carts", JSON.stringify(storageCarts));
+    // setDisplay(false);
+    // setCarts(storageCarts);
+    props.setCarts(storageCarts);
+  };
+
+  const handleChange = (e) => {
+    // setNumInput(e.target.value);
+    // props.onChange(e.target.value); //luu value vao array // tuong lai se luu object vao day luon
+    storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+    let itemFind = storageCarts.find((item) => item.name === props.name);
+    let value = e.target.value;
+    itemFind.getSL = value;
+    setNumInput(value);
+    localStorage.setItem("carts", JSON.stringify(storageCarts));
+    // setCarts(storageCarts);
+    props.setCarts(storageCarts);
+  };
+  const handleCheckbox = (e) => {
+    storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+    let itemFind = storageCarts.find((item) => item.name === props.name);
+    let value = e.target.checked;
+    itemFind.check = value;
+    setCheck(e.target.checked);
+    localStorage.setItem("carts", JSON.stringify(storageCarts));
+    // setCarts(storageCarts);
+    props.setCarts(storageCarts);
+  };
+
+  // console.log(carts);
 
   return (
     <div>
@@ -29,10 +63,7 @@ function CardCart(props) {
             <div className={cx("card-info")}>
               <div className={cx("card-info-name")}>{props.name}</div>
               <div className={cx("card-info-sl")}>{msg}</div>
-              <button
-                className={cx("card-info-btn")}
-                onClick={() => setDisplay(false)}
-              >
+              <button className={cx("card-info-btn")} onClick={handleRemove}>
                 Remove
               </button>
             </div>
@@ -40,18 +71,21 @@ function CardCart(props) {
           <div className={cx("cart-time")}>{props.time}</div>
           <div className={cx("cart-num")}>
             <input
-              // value={inputValue}
+              value={numInput}
               className={cx("cart-num-input")}
               type="number"
               min={0}
               max={props.quantity}
-              // onchange={(e) => setValue(e.target.value)}
+              onChange={handleChange}
             />
           </div>
           <div className={cx("cart-checkbox")}>
             <input
               type="checkbox"
               className={cx("cart-checkbox-input")}
+              id="checkbox-input"
+              checked={check}
+              onClick={handleCheckbox}
             ></input>
           </div>
         </div>

@@ -5,11 +5,7 @@ import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Register() {
-  const [posts, setPosts] = useState([]);
-  const [carts, setCarts] = useState(() => {
-    const storageCarts = JSON.parse(localStorage.getItem("carts"));
-    return storageCarts ?? [];
-  });
+  // const [posts, setPosts] = useState([]);
   // var postApi = "assets/databases/cart.json";
   // useEffect(() => {
   //   fetch(postApi)
@@ -18,6 +14,9 @@ function Register() {
   //       setPosts(posts);
   //     });
   // }, []);
+
+  // hiện thông báo phải click vào nút điều khoản
+
   const [displayTerm, setDisplayTerm] = useState(false);
   function handleSubmit() {
     const confirm_checkbox = document.getElementById("confirm-checkbox");
@@ -28,6 +27,23 @@ function Register() {
       setDisplayTerm(false);
     }
   }
+
+  // lấy value input từ các components
+  const [numInputs, setNumInputs] = useState([0]);
+
+  const handleInputChange = (index, value) => {
+    const newValues = [...numInputs];
+    newValues[index] = value;
+    setNumInputs(newValues);
+  };
+
+  // lấy dữ liệu giỏ hàng từ local về
+  const [carts, setCarts] = useState(() => {
+    const storageCarts = JSON.parse(localStorage.getItem("carts"));
+    return storageCarts ?? [];
+  });
+
+  const cartsCheck = carts.filter((item) => item.check);
 
   return (
     <div className={cx("container")}>
@@ -106,6 +122,9 @@ function Register() {
                   quantity={item.quantity}
                   name={item.name}
                   time={item.time}
+                  getSL={item.getSL}
+                  check={item.check}
+                  setCarts={setCarts}
                 />
               </span>
             </li>
@@ -128,7 +147,13 @@ function Register() {
           )}
           <div className={cx("wrap-total")}>
             <label>Total: </label>
-            <span>10</span>
+            <span>
+              {" "}
+              {cartsCheck.reduce(
+                (total, item) => parseInt(total) + parseInt(item.getSL),
+                0
+              )}{" "}
+            </span>
           </div>
           <button className={cx("confirm-submit")} onClick={handleSubmit}>
             Submit
