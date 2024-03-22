@@ -3,6 +3,7 @@
   padding: 20px;
 }
 
+
 .container__title{
   font-size: 4rem;
   margin: 20px;
@@ -89,30 +90,11 @@
   margin: 0;
   padding: 0;
 }
-.container-item__item{
-  flex: 1;
-  text-align: left;
-  color: #6f6d6d;;
-}
 
-.item-checkbox{
-}
 
-.container-item__item:first-child{
-  flex: 2;
-  margin-right: 8px;
-}
 
-.container-item__item:last-child{
-  text-align: right;
-}
 
-.container-item{
-  display: flex;
-  margin-bottom: 12px;
-  border: 2px;
-  
-}
+
 
 
 
@@ -170,4 +152,11 @@
     cursor: pointer;
     background-color: #534f4f;
   }
+}
+
+.click-here{
+  color: red;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 20px;
 }
