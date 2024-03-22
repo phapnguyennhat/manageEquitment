@@ -1,10 +1,24 @@
 import styles from './Signup.module.scss'
 import classNames from "classnames/bind";
 import { Link } from 'react-router-dom'
+import {useEffect, useState} from 'react'
 
 const cx = classNames.bind(styles)
+// const fs = require('fs')
 
 function Signup() {
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [passwordvali, setPasswordvali] = useState('')
+    const [user, setUser] = useState({})
+
+
+    var handleClick = () => {
+    
+    }
+
+
     return (
         <div className={cx('signWrapper')}>
             <div className={cx('signUp')}>
@@ -14,16 +28,39 @@ function Signup() {
                             <i className={cx('fa fa-close', 'signUp_close')} aria-hidden='true'></i>
                         </Link>
                         <h3>ĐĂNG KÝ</h3>
+                        <div className={cx('userNameInput')}>
+                            <input 
+                            type='text' 
+                            placeholder='Username'
+                            value={username}
+                            onChange={e => setUsername(e.target.value)}
+                            ></input>
+                        </div>
                         <div className={cx('emailInput')}>
-                            <input type='text' placeholder='Email address'></input>
+                            <input 
+                            type='text' 
+                            placeholder='Email address'
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            ></input>
                         </div>
                         <div className={cx('passwordInput')}>
-                            <input type='text' placeholder='Password'></input>
+                            <input 
+                            type='text' 
+                            placeholder='Password'
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            ></input>
                         </div>
                         <div className={cx('passwordInputValidation')}>
-                            <input type='text' placeholder='Password Validation'></input>
+                            <input 
+                            type='text' 
+                            placeholder='Password Validation'
+                            value={passwordvali}
+                            onChange={e => setPasswordvali(e.target.value)}
+                            ></input>
                         </div>
-                        <div className={cx('signUp_left_button')}>
+                        <div onClick={handleClick} className={cx('signUp_left_button')}>
                             <button>Xác nhận đăng ký</button>
                             <i>
                                <i className={cx("fa fa-angle-right")} aria-hidden="true"></i> 

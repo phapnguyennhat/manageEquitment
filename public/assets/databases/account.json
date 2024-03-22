@@ -1,0 +1,14 @@
+[
+    {
+        "type": "admin",
+        "email": "admin123@hcmut.edu.vn",
+        "password": "123456789",
+        "name": "admin dep trai"
+    },
+    {
+        "type": "user",
+        "email": "user@hcmut.edu.vn",
+        "password": "987654321",
+        "name": "ahihihahahohohu"
+    }
+]

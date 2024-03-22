@@ -1,13 +1,36 @@
 import styles from './Signin.module.scss'
 import classNames from "classnames/bind";
 import { Link } from 'react-router-dom'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 const cx = classNames.bind(styles)
+var agree = false
 
 function Signin() {
+    const [accounts, setAccounts] = useState([])
 const [email,setEmail] = useState('')
 const [password, setPassword] = useState('')
+
+
+
+    useEffect(() => {
+        var postApi = "assets/databases/account.json";
+      fetch(postApi)
+        .then((response) => response.json())
+        .then((accounts) => {
+          setAccounts(accounts);
+        });
+    }, []);
+
+
+    var handleClick = (type, email, password) => {
+    for(var i of accounts){
+        if(i.email == email){
+            if(i.type == type && i.password == password) {agree = true;break;}
+            else agree = false
+        }
+    }
+}
 
 
     return (
@@ -39,15 +62,23 @@ const [password, setPassword] = useState('')
                             ></input>
                         </div>
                         <div className={cx('signIn_right_button')}>
-                            <div className={cx('continue')}>
-                                <button>Tiếp tục</button>
+                            <div
+                            onClick={handleClick('user', email, password)} 
+                            className={cx('continue')}>
+                                <button>
+                                    {agree ? 
+                                    <Link to='/a'>Tiếp tục</Link> :
+                                    'Tiếp tục'    
+                                }
+                                </button>
                                 <i>
                                     <i className={cx("fa fa-angle-right", 'above')} aria-hidden="true"></i>
                                 </i>
                                 
                             </div>
-                            <div className={cx('continueAdmin')}>
-                                <button>{(email == "admin123@hcmut.edu.vn" && password == "123456789") ? 
+                            <div onClick={handleClick('admin', email, password)} className={cx('continueAdmin')}>
+                                <button>{
+                                agree ? 
                                 <Link to='/a'>Tiếp tục với tư cách quản trị viên</Link> :
                                 'Tiếp tục với tư cách quản trị viên'    
                             }</button>

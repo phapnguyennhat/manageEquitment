@@ -26,7 +26,7 @@ function Header() {
           </Link>
         </li>
         <li className={cx("header__navbar-item")}>
-          <Link className={cx("item-link")} to="/listregister">
+          <Link className={cx("item-link")} to="/alistregister">
             Danh sách đăng ký
           </Link>
         </li>
