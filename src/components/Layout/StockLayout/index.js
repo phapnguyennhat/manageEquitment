@@ -5,10 +5,10 @@ import Header from "./Header";
 
 const cx = classNames.bind(styles);
 
-function StockLayout({ children }) {
+function StockLayout({ children, carts }) {
   return (
     <div className={cx("wrapper")}>
-      <Header nameUser="Nguyễn Nhật Pháp" quantityCart="3" />
+      <Header nameUser="Nguyễn Nhật Pháp" carts={carts} />
       <div className={cx("content")}>{children}</div>
       <Footer />
     </div>

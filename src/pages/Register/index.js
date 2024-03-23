@@ -4,7 +4,7 @@ import CardCart from "~/components/CardCart";
 import { useState } from "react";
 
 const cx = classNames.bind(styles);
-function Register() {
+function Register({ carts, setCarts }) {
   // const [posts, setPosts] = useState([]);
   // var postApi = "assets/databases/cart.json";
   // useEffect(() => {
@@ -29,19 +29,8 @@ function Register() {
   }
 
   // lấy value input từ các components
-  const [numInputs, setNumInputs] = useState([0]);
-
-  const handleInputChange = (index, value) => {
-    const newValues = [...numInputs];
-    newValues[index] = value;
-    setNumInputs(newValues);
-  };
 
   // lấy dữ liệu giỏ hàng từ local về
-  const [carts, setCarts] = useState(() => {
-    const storageCarts = JSON.parse(localStorage.getItem("carts"));
-    return storageCarts ?? [];
-  });
 
   const cartsCheck = carts.filter((item) => item.check);
 

@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 function Card(props) {
   const [isVisible, setIsVisible] = useState(false);
-
   const hideDiv = () => {
     setIsVisible(true);
     setTimeout(() => {
@@ -51,7 +50,7 @@ function Card(props) {
     } else {
       carts = [...carts, { ...props, getSL: 1, check: false }];
     }
-
+    props.setCarts(carts);
     localStorage.setItem("carts", JSON.stringify(carts));
   };
 
