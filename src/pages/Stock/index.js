@@ -121,6 +121,8 @@ function Stock(props) {
               name={item.name}
               quantity={item.quantity}
               time={item.time}
+              state={item.state}
+              setCarts={props.setCarts}
             />
           ))}
         </div>

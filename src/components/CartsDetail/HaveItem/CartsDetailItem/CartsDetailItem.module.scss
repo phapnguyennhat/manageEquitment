@@ -1,0 +1,32 @@
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 8px;
+  &:hover{
+    background-color: #bab9b9;
+  }
+}
+
+.cart-item-img{
+  width: 40px;
+  border: 2px solid #bab9b9;
+  margin: 4px;
+}
+
+.cart-item-name{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+.wrap-quantity{
+
+}
+
+.cart-item-multi{
+  color:  black;
+}
+
+.cart-item-quantity{
+color:  black;
+}

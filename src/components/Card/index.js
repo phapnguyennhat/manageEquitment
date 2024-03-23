@@ -7,7 +7,6 @@ const cx = classNames.bind(styles);
 
 function Card(props) {
   const [isVisible, setIsVisible] = useState(false);
-
   const hideDiv = () => {
     setIsVisible(true);
     setTimeout(() => {
@@ -51,7 +50,7 @@ function Card(props) {
     } else {
       carts = [...carts, { ...props, getSL: 1, check: false }];
     }
-
+    props.setCarts(carts);
     localStorage.setItem("carts", JSON.stringify(carts));
   };
 
@@ -62,7 +61,7 @@ function Card(props) {
         <img src={props.src} alt="not found" className={cx("card-info-img")} />
         <h3 className={cx("card-info-name")}>{props.name}</h3>
         <div className={cx("card-info-msg")}>{msg}</div>
-        <div style={{ color: "red" }}>Thời gian mượn tối đa 7 ngày</div>
+        <div style={{ color: "green" }}>{`Tình trạng ${props.state}`}</div>
         <button className={cx("card-info-btn")} onClick={handleAdd}>
           Thêm vào giỏ hàng
         </button>

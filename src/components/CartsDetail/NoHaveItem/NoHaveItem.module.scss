@@ -1,0 +1,10 @@
+.no-have-item{
+  display:  flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.no-have-item__msg{
+  color: rgb(120, 119, 119);
+  font-weight: 500;
+  margin-top: 10px;
+}

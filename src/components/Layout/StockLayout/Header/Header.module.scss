@@ -62,6 +62,10 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
+
+  &:hover .list-cart{
+    display: block;
+  }
 }
 
 
@@ -87,4 +91,10 @@
   width: 20px;
   margin: 0 8px;
 }
+
+
+.list-cart{
+  display: none;
+}
+
 
