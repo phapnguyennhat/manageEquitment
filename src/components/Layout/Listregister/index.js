@@ -25,7 +25,7 @@ function ListData() {
                 else getstatus = 0;
                 return(
                 <div key={post.id} className={cx('row',`row${getkey}`)}>
-                    <div className={cx('col-md-1', 'listHeader')}>{index}</div>
+                    <div className={cx('col-md-1', 'listHeader')}>{index + 1}</div>
                     <div className={cx('col-md-3', 'listHeader')}>{post.id}</div>
                     <div className={cx('col-md-3', 'listHeader')}>{post.timein}</div>
                     <div className={cx('col-md-3', 'listHeader')}>{post.timeout}</div>

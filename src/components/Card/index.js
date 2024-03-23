@@ -61,7 +61,7 @@ function Card(props) {
         <img src={props.src} alt="not found" className={cx("card-info-img")} />
         <h3 className={cx("card-info-name")}>{props.name}</h3>
         <div className={cx("card-info-msg")}>{msg}</div>
-        <div style={{ color: "red" }}>Thời hạn mượn {props.time}</div>
+        <div style={{ color: "red" }}>Thời gian mượn tối đa 7 ngày</div>
         <button className={cx("card-info-btn")} onClick={handleAdd}>
           Thêm vào giỏ hàng
         </button>
