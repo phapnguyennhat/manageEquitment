@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 function CardCart(props) {
   const [display, setDisplay] = useState(true);
 
-  let msg = `Còn ${props.quantity}`;
+  let msg = `Số lượng:  ${props.quantity} cái`;
   if (props.quantity === 0) {
     msg = "Hết";
   }
@@ -63,12 +63,15 @@ function CardCart(props) {
             <div className={cx("card-info")}>
               <div className={cx("card-info-name")}>{props.name}</div>
               <div className={cx("card-info-sl")}>{msg}</div>
-              <button className={cx("card-info-btn")} onClick={handleRemove}>
-                Remove
-              </button>
             </div>
           </div>
-          <div className={cx("cart-time")}>{props.time}</div>
+          <div
+            className={cx("cart-state", {
+              "cart-state--green": props.state === "tốt",
+            })}
+          >
+            {props.state}
+          </div>
           <div className={cx("cart-num")}>
             <input
               value={numInput}
@@ -77,6 +80,7 @@ function CardCart(props) {
               min={0}
               max={props.quantity}
               onChange={handleChange}
+              // placeholder="Số lượng"
             />
           </div>
           <div className={cx("cart-checkbox")}>
@@ -87,6 +91,9 @@ function CardCart(props) {
               checked={check}
               onClick={handleCheckbox}
             ></input>
+            <button className={cx("card-info-btn")} onClick={handleRemove}>
+              Remove
+            </button>
           </div>
         </div>
       )}

@@ -39,7 +39,9 @@ function Header({ carts, nameUser }) {
           />
           <span>{nameUser}</span>
           <Link className={cx("header-cart-wrap", "item-link")} to="/register">
-            <CartsDetail carts={carts} />
+            <div className={cx("list-cart")}>
+              <CartsDetail carts={carts} />
+            </div>
             <img
               src="/assets/imgs/cart-shopping-solid.svg"
               alt="not found"

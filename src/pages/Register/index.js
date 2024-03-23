@@ -28,8 +28,6 @@ function Register({ carts, setCarts }) {
     }
   }
 
-  // lấy value input từ các components
-
   // lấy dữ liệu giỏ hàng từ local về
 
   const cartsCheck = carts.filter((item) => item.check);
@@ -49,93 +47,73 @@ function Register({ carts, setCarts }) {
       <div className={cx("container-form")}>
         <div className={cx("container-form-title")}>Thông Tin Người Mượn</div>
         <div className={cx("container-form-input")}>
-          <div className={cx('form-input-info')}>
-            <p className={cx('information')}>Thông tin</p>
-            <div className={cx('wrap-info')}>
-              <div className={cx('wrap-info-left')}>
-                <p className={cx('aboveleftinfo')}>Họ và tên</p>
-                <input
-                  type='text'
-                  placeholder="Họ và tên"
-                ></input>
-              </div>
-              <div className={cx('wrap-info-right')}>
-                <p>Mã số sinh viên</p>
-                <input
-                  type='text'
-                  placeholder="Mã số sinh viên"
-                ></input>
-              </div>
-            </div>
+          <div>Họ và tên</div>
+          <div className={cx("wrap-input-name")}>
+            <input
+              className={cx("form-input-info")}
+              type="text"
+              placeholder="First Name"
+              style={{ flex: 1 }}
+            />
+            <input
+              className={cx("form-input-info")}
+              type="text"
+              placeholder="Last Name"
+              style={{ flex: 1 }}
+            />
           </div>
-          <div className={cx('form-input-contact')}>
-            <p>Liên hệ</p>
-            <div className={cx('wrap-input-contact')}>
-              <input
-                className={cx('input-contact-left')}
-                placeholder="Email"
-              ></input>
-              <input
-                className={cx('input-contact-right')}
-                placeholder="Số điện thoại"
-              ></input>
-            </div>
-          </div>
-          <div className={cx('form-input-time')}>
-            <div className={cx('wrap-input-time')}>
-              <div className={cx('time-in')}>
-                <p>Ngày mượn</p>
-                <input type='date'
-                  placeholder="Ngày mượn"
-                ></input>
-              </div>
-              <div className={cx('time-out')}>
-                <p>Ngày trả</p>
-                <input type='date'
-                  placeholder='Ngày trả'
-                ></input>
-              </div>
-
-            </div>
-          </div>
+          <input
+            className={cx("form-input-info")}
+            type="text"
+            placeholder="Mã Số Sinh Viên"
+          />
+          <div>Liên hệ</div>
+          <input
+            className={cx("form-input-info")}
+            type="text"
+            placeholder="Email address"
+          />
+          <input
+            className={cx("form-input-info")}
+            type="text"
+            placeholder="Số điện thoại"
+          />
+          <div>Địa chỉ giao</div>
+          <input
+            className={cx("form-input-info")}
+            type="text"
+            placeholder="Tỉnh/Thành phố"
+          />
+          <input
+            className={cx("form-input-info")}
+            type="text"
+            placeholder="Địa chỉ"
+          />
         </div>
       </div>
       <div className={cx("cart")}>
         <h3 className={cx("cart-title")}>Giỏ Hàng</h3>
         <div className={cx("container-table-head")}>
-          <span className={cx("table-head-item", 'table-header')}>Vật Dụng</span>
-          <span className={cx("table-head-item", 'table-head')}>Tình trạng</span>
-          <span className={cx("table-head-item", 'table-head')}>Số lượng mượn</span>
-          <span className={cx("table-head-item", 'table-head')}>Tùy chọn</span>
+          <span className={cx("table-head-item")}>Vật Dụng</span>
+          <span className={cx("table-head-item")}>Tình trạng</span>
+          <span className={cx("table-head-item")}>Quantity</span>
+          <span className={cx("table-head-item")}>Select</span>
         </div>
         <ul className={cx("container-list-item")}>
           {carts.map((item, index) => (
             <li className={cx("container-item")}>
-              <span className={cx("container-item__item", 'container-img')}>
-                <img alt='' src={item.src}></img>
-
-                <div className={cx('img-info')}>
-                  <p>{item.name}</p>
-                  <p>Số lượng: {item.quantity} cái</p>
-                </div>
-
-              </span>
-              <span className={cx("container-item__item", 'item_item-status')}>Tốt</span>
-              <span className={cx("container-item__item", 'item_item-quantity')}>
-                <input
-                  placeholder="Số lượng"
-                  type="number"
-                  min="0"
-                  max={item.quantity}
-                  className={cx("item-input")}
+              <span className={cx("container-item__item")}>
+                <CardCart
+                  key={index}
+                  src={item.src}
+                  quantity={item.quantity}
+                  name={item.name}
+                  time={item.time}
+                  getSL={item.getSL}
+                  check={item.check}
+                  state={item.state}
+                  setCarts={setCarts}
                 />
-              </span>
-              <span className={cx("container-item__item", 'item-option')}>
-                <div className={cx('item-input')}>
-                  <input type="checkbox" className={cx("item-checkbox")} />Chọn
-                </div>
-
-                <div className={cx('item-delete')}>Xóa</div>
               </span>
             </li>
           ))}

@@ -5,7 +5,8 @@ import CartsDetailItem from "./CartsDetailItem";
 const cx = classNames.bind(styles);
 
 function HaveItem({ carts }) {
-  console.table(carts);
+  // console.table(carts);
+  // console.log("carts", carts);
   return (
     <div className={cx("cart-detail")}>
       <div className={cx("cart-detail-title")}>Sản phẩm đã thêm</div>
