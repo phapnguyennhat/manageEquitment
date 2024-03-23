@@ -1,4 +1,4 @@
-import styles from './Signin.module.scss'
+import styles from "./Signin.module.scss";
 import classNames from "classnames/bind";
 import { Link } from 'react-router-dom'
 import {useState, useEffect} from 'react'
@@ -102,4 +102,4 @@ const [password, setPassword] = useState('')
     )
 }
 
-export default Signin
+export default Signin;

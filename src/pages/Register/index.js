@@ -1,19 +1,49 @@
 import classNames from "classnames/bind";
 import styles from "./Register.module.scss";
 import CardCart from "~/components/CardCart";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 function Register() {
-  const [posts, setPosts] = useState([]);
-  var postApi = "assets/databases/cart.json";
-  useEffect(() => {
-    fetch(postApi)
-      .then((response) => response.json())
-      .then((posts) => {
-        setPosts(posts);
-      });
-  }, []);
+  // const [posts, setPosts] = useState([]);
+  // var postApi = "assets/databases/cart.json";
+  // useEffect(() => {
+  //   fetch(postApi)
+  //     .then((response) => response.json())
+  //     .then((posts) => {
+  //       setPosts(posts);
+  //     });
+  // }, []);
+
+  // hiện thông báo phải click vào nút điều khoản
+
+  const [displayTerm, setDisplayTerm] = useState(false);
+  function handleSubmit() {
+    const confirm_checkbox = document.getElementById("confirm-checkbox");
+    if (confirm_checkbox.checked === false) {
+      console.log("ban can chon vao day");
+      setDisplayTerm(true);
+    } else {
+      setDisplayTerm(false);
+    }
+  }
+
+  // lấy value input từ các components
+  const [numInputs, setNumInputs] = useState([0]);
+
+  const handleInputChange = (index, value) => {
+    const newValues = [...numInputs];
+    newValues[index] = value;
+    setNumInputs(newValues);
+  };
+
+  // lấy dữ liệu giỏ hàng từ local về
+  const [carts, setCarts] = useState(() => {
+    const storageCarts = JSON.parse(localStorage.getItem("carts"));
+    return storageCarts ?? [];
+  });
+
+  const cartsCheck = carts.filter((item) => item.check);
 
   return (
     <div className={cx("container")}>
@@ -90,7 +120,7 @@ function Register() {
           <span className={cx("table-head-item", 'table-head')}>Tùy chọn</span>
         </div>
         <ul className={cx("container-list-item")}>
-          {posts.map((item) => (
+          {carts.map((item, index) => (
             <li className={cx("container-item")}>
               <span className={cx("container-item__item", 'container-img')}>
                 <img alt='' src={item.src}></img>
@@ -124,16 +154,31 @@ function Register() {
 
         <div className={cx("confirm")}>
           <div className={cx("wrap-term")}>
-            <input type="checkbox" className={cx("confirm-checkbox")} />
+            <input
+              type="checkbox"
+              className={cx("confirm-checkbox")}
+              id="confirm-checkbox"
+            />
             <span className={cx("confirm-msg")}>
               Tôi Đồng Ý Với Điều Khoản Cam Đoan Sẽ Trả Đủ
             </span>
           </div>
+          {displayTerm && (
+            <div className={cx("click-here")}>Bạn cần chọn vào đây!</div>
+          )}
           <div className={cx("wrap-total")}>
             <label>Total: </label>
-            <span>10</span>
+            <span>
+              {" "}
+              {cartsCheck.reduce(
+                (total, item) => parseInt(total) + parseInt(item.getSL),
+                0
+              )}{" "}
+            </span>
           </div>
-          <button className={cx("confirm-submit")}>Submit</button>
+          <button className={cx("confirm-submit")} onClick={handleSubmit}>
+            Submit
+          </button>
         </div>
       </div>
     </div>

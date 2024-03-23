@@ -56,7 +56,6 @@ function Signup() {
                             ></input>
                         </div>
                         <div
-                            onClick={handleClick}
                             className={cx('signUp_left_button')}
                         >
                             <button>Xác nhận đăng ký</button>

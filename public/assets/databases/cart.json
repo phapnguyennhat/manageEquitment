@@ -1,24 +1,38 @@
 [
-  { "src": "/assets/imgs/table.jpg", "name": "Bàn học gỗ tốt", "quantity": 10 },
-  { "src": "/assets/imgs/bang_den.jpg", "name": "Bảng đen", "quantity": 10 },
+  {
+    "src": "/assets/imgs/table.jpg",
+    "name": "Bàn học gỗ tốt",
+    "quantity": 10,
+    "time": "7 ngày"
+  },
+  {
+    "src": "/assets/imgs/bang_den.jpg",
+    "name": "Bảng đen",
+    "quantity": 10,
+    "time": "7 ngày"
+  },
   {
     "src": "/assets/imgs/bo_dam.jpg",
     "name": "Bộ đàm không dây",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày"
   },
   {
     "src": "/assets/imgs/casio570.jpg",
     "name": "Máy tính casio 570",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày"
   },
   {
     "src": "/assets/imgs/den_day_decor.jpg",
     "name": "Đèn dây trang trí",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày"
   },
   {
     "src": "/assets/imgs/ghe_cong_thai_hoc.jpg",
     "name": "Ghế công thái học",
-    "quantity": 10
+    "quantity": 10,
+    "time": "7 ngày"
   }
 ]
