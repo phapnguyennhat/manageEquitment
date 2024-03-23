@@ -67,16 +67,16 @@ function Register() {
               <div className={cx('time-in')}>
                 <p>Ngày mượn</p>
                 <input type='date'
-              placeholder="Ngày mượn"
-              ></input>
+                  placeholder="Ngày mượn"
+                ></input>
               </div>
               <div className={cx('time-out')}>
                 <p>Ngày trả</p>
                 <input type='date'
-              placeholder='Ngày trả'
-              ></input>
+                  placeholder='Ngày trả'
+                ></input>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -84,32 +84,39 @@ function Register() {
       <div className={cx("cart")}>
         <h3 className={cx("cart-title")}>Giỏ Hàng</h3>
         <div className={cx("container-table-head")}>
-          <span className={cx("table-head-item")}>Vật Dụng</span>
-          <span className={cx("table-head-item")}>Thời Hạn</span>
-          <span className={cx("table-head-item")}>Quantity</span>
-          <span className={cx("table-head-item")}>Select</span>
+          <span className={cx("table-head-item", 'table-header')}>Vật Dụng</span>
+          <span className={cx("table-head-item", 'table-head')}>Tình trạng</span>
+          <span className={cx("table-head-item", 'table-head')}>Số lượng mượn</span>
+          <span className={cx("table-head-item", 'table-head')}>Tùy chọn</span>
         </div>
         <ul className={cx("container-list-item")}>
           {posts.map((item) => (
             <li className={cx("container-item")}>
-              <span className={cx("container-item__item")}>
-                <CardCart
-                  src={item.src}
-                  quantity={item.quantity}
-                  name={item.name}
-                />
+              <span className={cx("container-item__item", 'container-img')}>
+                <img alt='' src={item.src}></img>
+
+                <div className={cx('img-info')}>
+                  <p>{item.name}</p>
+                  <p>Số lượng: {item.quantity} cái</p>
+                </div>
+
               </span>
-              <span className={cx("container-item__item")}>8 ngày</span>
-              <span className={cx("container-item__item")}>
+              <span className={cx("container-item__item", 'item_item-status')}>Tốt</span>
+              <span className={cx("container-item__item", 'item_item-quantity')}>
                 <input
+                  placeholder="Số lượng"
                   type="number"
                   min="0"
                   max={item.quantity}
                   className={cx("item-input")}
                 />
               </span>
-              <span className={cx("container-item__item")}>
-                <input type="checkbox" className={cx("item-checkbox")} />
+              <span className={cx("container-item__item", 'item-option')}>
+                <div className={cx('item-input')}>
+                  <input type="checkbox" className={cx("item-checkbox")} />Chọn
+                </div>
+
+                <div className={cx('item-delete')}>Xóa</div>
               </span>
             </li>
           ))}

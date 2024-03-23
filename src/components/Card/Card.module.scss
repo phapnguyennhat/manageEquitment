@@ -1,7 +1,8 @@
 .card{
   width: 302px;
   height: 410px;
-  margin: 10px;
+  margin:0 1%;
+  margin-top:5%;
 }
 
 .card-info{
@@ -13,8 +14,16 @@
   border: 2px solid #bab9b9;
 }
 
+.card-info-name{
+  margin-top:5%;
+}
+
 .card-info-num{
   outline: none;
+}
+
+.card-info-msg{
+  font-size: 110%;
 }
 
 .card-info-btn{
@@ -24,6 +33,6 @@
   color: var(--text-color);
   border: none;
   float: right;
-  margin-right: 26px;
+  margin-right:0;
 }
 
