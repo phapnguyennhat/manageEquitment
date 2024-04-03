@@ -45,5 +45,9 @@
   border: none;
   float: right;
   margin-right:0;
+
+  &:hover{
+    background-color: #0d556b;
+  }
 }
 

@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./Card.module.scss";
-import { useState } from "react";
+import { useState, memo } from "react";
 import AddSuccess from "../AddSuccess";
 
 const cx = classNames.bind(styles);
@@ -58,7 +58,12 @@ function Card(props) {
     <div className={cx("card")}>
       {isVisible && <AddSuccess />}
       <div className={cx("card-info")}>
-        <img src={props.src} alt="not found" className={cx("card-info-img")} />
+        <img
+          src={props.src}
+          alt="not found"
+          className={cx("card-info-img")}
+          loading="lazy"
+        />
         <h3 className={cx("card-info-name")}>{props.name}</h3>
         <div className={cx("card-info-msg")}>{msg}</div>
         <div style={{ color: "green" }}>{`Tình trạng ${props.state}`}</div>
@@ -70,4 +75,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default memo(Card);

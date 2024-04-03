@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./CardCart.module.scss";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const cx = classNames.bind(styles);
 function CardCart(props) {
@@ -101,4 +101,4 @@ function CardCart(props) {
   );
 }
 
-export default CardCart;
+export default memo(CardCart);

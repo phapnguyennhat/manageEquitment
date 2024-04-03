@@ -3,6 +3,7 @@
  display:  flex;
  text-align: left;
  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .wrap-card{
@@ -72,7 +73,8 @@
   color: #8A8A8A;
   outline: none;
   border: 2px solid #bab9b9;
-  // width: 90px;
+  width: 172px;
+
 }
 
 

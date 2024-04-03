@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Register.module.scss";
 import CardCart from "~/components/CardCart";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const cx = classNames.bind(styles);
 function Register({ carts, setCarts }) {
@@ -30,7 +30,19 @@ function Register({ carts, setCarts }) {
 
   // lấy dữ liệu giỏ hàng từ local về
 
-  const cartsCheck = carts.filter((item) => item.check);
+  const total = useMemo(() => {
+    const cartsCheck = carts.filter((item) => item.check);
+    return cartsCheck.reduce(
+      (result, item) => parseInt(result) + parseInt(item.getSL),
+      0
+    );
+  }, [carts]);
+  // const total = useMemo(() => {
+  //   const cartsCheck = carts.filter((item) => item.check);
+  //   return cartsCheck.reduce(
+  //     (res, item) => (parseInt(res) + parseInt(item.getSL), 0)
+  //   );
+  // }, [carts]);
 
   return (
     <div className={cx("container")}>
@@ -135,13 +147,7 @@ function Register({ carts, setCarts }) {
           )}
           <div className={cx("wrap-total")}>
             <label>Total: </label>
-            <span>
-              {" "}
-              {cartsCheck.reduce(
-                (total, item) => parseInt(total) + parseInt(item.getSL),
-                0
-              )}{" "}
-            </span>
+            <span>{total}</span>
           </div>
           <button className={cx("confirm-submit")} onClick={handleSubmit}>
             Submit
