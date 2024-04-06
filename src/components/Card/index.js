@@ -1,4 +1,6 @@
 import classNames from "classnames/bind";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Card.module.scss";
 import { useState, memo } from "react";
 import AddSuccess from "../AddSuccess";
@@ -7,14 +9,15 @@ const cx = classNames.bind(styles);
 
 function Card(props) {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
   const hideDiv = () => {
     setIsVisible(true);
     setTimeout(() => {
       setIsVisible(false); // Đặt lại isVisible thành true sau 3 giây
     }, 2000);
   };
-  let msg = `Còn ${props.quantity}`;
-  if (props.quantity === 0) {
+  let msg = `Còn ${props.item.quantity}`;
+  if (props.item.quantity === 0) {
     msg = "Hết";
   }
 
@@ -55,21 +58,26 @@ function Card(props) {
   };
 
   return (
-    <div className={cx("card")}>
-      {isVisible && <AddSuccess />}
+    <div
+      className={cx("card")}
+      onClick={() => {
+        navigate("/products", { state: { info: props.item } });
+      }}
+    >
+      {/* {isVisible && <AddSuccess />} */}
       <div className={cx("card-info")}>
         <img
-          src={props.src}
+          src={props.item.src}
           alt="not found"
           className={cx("card-info-img")}
           loading="lazy"
         />
-        <h3 className={cx("card-info-name")}>{props.name}</h3>
+        <h3 className={cx("card-info-name")}>{props.item.name}</h3>
         <div className={cx("card-info-msg")}>{msg}</div>
-        <div style={{ color: "green" }}>{`Tình trạng ${props.state}`}</div>
-        <button className={cx("card-info-btn")} onClick={handleAdd}>
-          Thêm vào giỏ hàng
-        </button>
+        <div style={{ color: "green" }}>{`Tình trạng ${props.item.state}`}</div>
+        {/* <button className={cx("card-info-btn")} onClick={handleAdd}>
+          Thêm vào DS Đăng ký
+        </button> */}
       </div>
     </div>
   );

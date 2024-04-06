@@ -3,21 +3,23 @@ import Stock from "~/pages/Stock";
 import Signin from "~/pages/Signin";
 import Signup from "~/pages/Signup";
 import Register from "~/pages/Register";
-import Listregister from "~/pages/Listregister"
+import Listregister from "~/pages/Listregister";
 import Adminlistregister from "~/pages/Adminlistregister";
 import { StockLayout } from "~/components/Layout";
+import Products from "~/pages/Products";
 
 //public Routes
 
 const publicRoutes = [
   { path: "/", component: Home },
-  { path: "/a", component: Home, layout: StockLayout},
+  { path: "/a", component: Home, layout: StockLayout },
   { path: "/stock", component: Stock, layout: StockLayout },
-  { path: "/signin", component: Signin},
-  { path: "/signup", component: Signup},
+  { path: "/signin", component: Signin },
+  { path: "/signup", component: Signup },
   { path: "/register", component: Register, layout: StockLayout },
-  { path: "/listregister", component: Listregister, layout: StockLayout},
-  { path: "/alistregister", component: Adminlistregister, layout: StockLayout}
+  { path: "/listregister", component: Listregister, layout: StockLayout },
+  { path: "/alistregister", component: Adminlistregister, layout: StockLayout },
+  { path: "/products", component: Products, layout: StockLayout },
 ];
 
 const privateRoutes = [];

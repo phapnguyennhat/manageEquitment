@@ -117,12 +117,13 @@ function Stock(props) {
           {displayStock.map((item, index) => (
             <Card
               key={index}
-              src={item.src}
-              name={item.name}
-              quantity={item.quantity}
-              time={item.time}
-              state={item.state}
-              setCarts={props.setCarts}
+              // src={item.src}
+              // name={item.name}
+              // quantity={item.quantity}
+              // time={item.time}
+              // state={item.state}
+              // setCarts={props.setCarts}
+              item={item}
             />
           ))}
         </div>

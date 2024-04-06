@@ -14,7 +14,7 @@ function AddSuccess() {
         />
       </div>
       <div className={cx("add-cart-success-msg")}>
-        Cập nhật giỏ hàng thành công
+        Cập nhật DS đăng ký thành công
       </div>
     </div>
   );
