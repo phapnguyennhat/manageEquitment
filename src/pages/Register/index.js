@@ -1,7 +1,8 @@
 import classNames from "classnames/bind";
+
 import styles from "./Register.module.scss";
 import CardCart from "~/components/CardCart";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 
 const cx = classNames.bind(styles);
 function Register({ carts, setCarts }) {
@@ -18,6 +19,7 @@ function Register({ carts, setCarts }) {
   // hiện thông báo phải click vào nút điều khoản
 
   const [displayTerm, setDisplayTerm] = useState(false);
+
   function handleSubmit() {
     const confirm_checkbox = document.getElementById("confirm-checkbox");
     if (confirm_checkbox.checked === false) {
@@ -103,55 +105,57 @@ function Register({ carts, setCarts }) {
           />
         </div>
       </div>
+      {/* list */}
       <div className={cx("cart")}>
-        <h3 className={cx("cart-title")}>Giỏ Hàng</h3>
-        <div className={cx("container-table-head")}>
-          <span className={cx("table-head-item")}>Vật Dụng</span>
-          <span className={cx("table-head-item")}>Tình trạng</span>
-          <span className={cx("table-head-item")}>Quantity</span>
-          <span className={cx("table-head-item")}>Select</span>
-        </div>
-        <ul className={cx("container-list-item")}>
-          {carts.map((item, index) => (
-            <li className={cx("container-item")}>
-              <span className={cx("container-item__item")}>
-                <CardCart
-                  key={index}
-                  src={item.src}
-                  quantity={item.quantity}
-                  name={item.name}
-                  time={item.time}
-                  getSL={item.getSL}
-                  check={item.check}
-                  state={item.state}
-                  setCarts={setCarts}
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <h3 className={cx("cart-title")}>Danh Sách Đăng Ký</h3>
+        <table className={cx("container-table")}>
+          <thead>
+            <th className={cx("table-head-item")}>Chọn tất cả</th>
+            <th className={cx("table-head-item")}>Vật Dụng</th>
+            <th className={cx("table-head-item")}>Số lượng</th>
+            <th className={cx("table-head-item")}>Thời gian mượn</th>
+            <th className={cx("table-head-item")}>Xóa tất cả</th>
+          </thead>
+          <tbody className={cx("container-list-item")}>
+            {carts.map((item, index) => (
+              <CardCart
+                key={index}
+                src={item.src}
+                quantity={item.quantity}
+                name={item.name}
+                time={item.time}
+                getSL={item.getSL}
+                check={item.check}
+                state={item.state}
+                setCarts={setCarts}
+              />
+            ))}
+          </tbody>
+        </table>
 
-        <div className={cx("confirm")}>
-          <div className={cx("wrap-term")}>
-            <input
-              type="checkbox"
-              className={cx("confirm-checkbox")}
-              id="confirm-checkbox"
-            />
-            <span className={cx("confirm-msg")}>
-              Tôi Đồng Ý Với Điều Khoản Cam Đoan Sẽ Trả Đủ
-            </span>
+        <div className={cx("wrapper-confirm")}>
+          <div className={cx("confirm")}>
+            <div className={cx("wrap-term")}>
+              <input
+                type="checkbox"
+                className={cx("confirm-checkbox", "custom-checkbox")}
+                id="confirm-checkbox"
+              />
+              <span className={cx("confirm-msg")}>
+                Tôi Đồng Ý Với Điều Khoản Cam Đoan Sẽ Trả Đủ
+              </span>
+            </div>
+            {displayTerm && (
+              <div className={cx("click-here")}>Bạn cần chọn vào đây!</div>
+            )}
+            <div className={cx("wrap-total")}>
+              <label>Tổng: </label>
+              <span>{total}</span>
+            </div>
+            <button className={cx("confirm-submit")} onClick={handleSubmit}>
+              Submit
+            </button>
           </div>
-          {displayTerm && (
-            <div className={cx("click-here")}>Bạn cần chọn vào đây!</div>
-          )}
-          <div className={cx("wrap-total")}>
-            <label>Total: </label>
-            <span>{total}</span>
-          </div>
-          <button className={cx("confirm-submit")} onClick={handleSubmit}>
-            Submit
-          </button>
         </div>
       </div>
     </div>

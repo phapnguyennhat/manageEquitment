@@ -8,14 +8,8 @@ import AddSuccess from "../AddSuccess";
 const cx = classNames.bind(styles);
 
 function Card(props) {
-  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
-  const hideDiv = () => {
-    setIsVisible(true);
-    setTimeout(() => {
-      setIsVisible(false); // Đặt lại isVisible thành true sau 3 giây
-    }, 2000);
-  };
+
   let msg = `Còn ${props.item.quantity}`;
   if (props.item.quantity === 0) {
     msg = "Hết";
@@ -27,7 +21,6 @@ function Card(props) {
   // });
 
   const handleAdd = () => {
-    hideDiv();
     // const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
     // setCarts(storageCarts);
 

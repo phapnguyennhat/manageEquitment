@@ -1,10 +1,45 @@
 import classNames from "classnames/bind";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import styles from "./CardCart.module.scss";
 import { memo, useState } from "react";
 
 const cx = classNames.bind(styles);
 function CardCart(props) {
   const [display, setDisplay] = useState(true);
+  // hien alert confirm khi onclick delete vat dung
+  const [displayAlert, setDisplayAlert] = useState(false);
+  const handleClose = () => {
+    setDisplayAlert(false);
+  };
+  const onClickDelete = () => {
+    setDisplayAlert(true);
+  };
+  //input number
+  const [value, setValue] = useState(1);
+  const handleOnChange = (e) => {
+    if (
+      !isNaN(e.target.value) &&
+      e.target.value <= props.quantity &&
+      e.target.value != "0"
+    ) {
+      setValue(e.target.value);
+    }
+  };
+  const handleIncrease = () => {
+    if (value < props.quantity) {
+      setValue((prev) => +prev + 1);
+    }
+  };
+  const handleDecrease = () => {
+    if (value > 1) {
+      setValue((prev) => +prev - 1);
+    }
+  };
 
   let msg = `Số lượng:  ${props.quantity} cái`;
   if (props.quantity === 0) {
@@ -51,53 +86,66 @@ function CardCart(props) {
   };
 
   // console.log(carts);
-
   return (
-    <div>
-      {display && (
-        <div className={cx("card")}>
-          <div className={cx("wrap-card")}>
-            <div className={cx("card-img")}>
-              <img src={props.src} alt="not found" />
-            </div>
-            <div className={cx("card-info")}>
-              <div className={cx("card-info-name")}>{props.name}</div>
-              <div className={cx("card-info-sl")}>{msg}</div>
-            </div>
-          </div>
-          <div
-            className={cx("cart-state", {
-              "cart-state--green": props.state === "tốt",
-            })}
-          >
-            {props.state}
-          </div>
-          <div className={cx("cart-num")}>
-            <input
-              value={numInput}
-              className={cx("cart-num-input")}
-              type="number"
-              min={0}
-              max={props.quantity}
-              onChange={handleChange}
-              // placeholder="Số lượng"
-            />
-          </div>
-          <div className={cx("cart-checkbox")}>
-            <input
-              type="checkbox"
-              className={cx("cart-checkbox-input")}
-              id="checkbox-input"
-              checked={check}
-              onClick={handleCheckbox}
-            ></input>
-            <button className={cx("card-info-btn")} onClick={handleRemove}>
-              Remove
-            </button>
+    <tr className={cx("row-product")}>
+      <td>
+        <input type="checkbox" />
+      </td>
+      <td>
+        <div className={cx("wrapper-product")}>
+          <img src={props.src} alt="not found" className={cx("img-product")} />
+          <div className={cx("info-product")}>
+            <label>{props.name}</label>
+            <p>{msg}</p>
           </div>
         </div>
-      )}
-    </div>
+      </td>
+      <td className={cx("vertical-top")}>
+        <div className={cx("number")}>
+          <span>
+            <i class="fa-solid fa-minus" onClick={handleDecrease}></i>
+          </span>
+          <input
+            type="text"
+            className={cx("input-number")}
+            value={value}
+            onChange={handleOnChange}
+          />
+          <span>
+            <i class="fa-solid fa-plus" onClick={handleIncrease}></i>
+          </span>
+        </div>
+      </td>
+      <td className={cx("vertical-top")}> 7 ngay</td>
+      <td>
+        <i class="fa-solid fa-xmark" onClick={onClickDelete}></i>
+      </td>
+      <Dialog
+        open={displayAlert}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title" className={cx("med-font-size")}>
+          {`Bỏ ${props.name} khỏi DS Đăng ký ?`}
+        </DialogTitle>
+        {/* <DialogContent>
+          <DialogContentText id="alert-dialog-description"></DialogContentText>
+        </DialogContent> */}
+        <DialogActions>
+          <Button onClick={handleClose} className={cx("med-font-size")}>
+            Không
+          </Button>
+          <Button
+            onClick={handleClose}
+            className={cx("med-font-size")}
+            autoFocus
+          >
+            Đồng ý
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </tr>
   );
 }
 
