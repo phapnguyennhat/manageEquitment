@@ -3,6 +3,9 @@
   height: 410px;
   margin:0 1%;
   margin-top:5%;
+  &:hover{
+    border: #0d556b solid 2px;
+  }
 }
 
 .card-info{
@@ -45,5 +48,9 @@
   border: none;
   float: right;
   margin-right:0;
+
+  &:hover{
+    background-color: #0d556b;
+  }
 }
 

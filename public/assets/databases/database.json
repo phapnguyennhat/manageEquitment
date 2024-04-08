@@ -1,0 +1,408 @@
+{
+  "Stockdb": [
+    {
+      "src": "/assets/imgs/table.jpg",
+      "name": "Bàn học gỗ tốt",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/bang_den.jpg",
+      "name": "Bảng đen",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/bo_dam.jpg",
+      "name": "Bộ đàm không dây",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Sự kiện",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/casio570.jpg",
+      "name": "Máy tính casio 570",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/den_day_decor.jpg",
+      "name": "Đèn dây trang trí",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/ghe_cong_thai_hoc.jpg",
+      "name": "Ghế công thái học",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/bo_dam.jpg",
+      "name": "Bộ đàm không dây",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Sự kiện",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/ke_de_ho_so.jpg",
+      "name": "Kệ để hồ sơ",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/ke_lon.jpg",
+      "name": "Kệ để hồ sơ cỡ lớn",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/khung_poster.jpg",
+      "name": "Khung poster",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/laptop.jpg",
+      "name": "Laptop hãng HP",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Sự kiện",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/light_decor.jpg",
+      "name": "Bóng đèn trang trí vàng",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/tu_ho_so.jpg",
+      "name": "Tủ đựng hồ sơ",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Văn phòng phẩm",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/fan.jpg",
+      "name": "Quạt cây hiệu Senko",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Thiết bị",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/chau_cay.jpg",
+      "name": "Chậu cây hình con vật",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/gundam.jpg",
+      "name": "Mô hình gundam",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ chơi",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/loa_lon.jpg",
+      "name": "Loa thùng cỡ lớn",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Sự kiện",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/loa_nho.jpg",
+      "name": "Loa nhỏ gắn vào máy tính",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Thiết bị",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/quat_mini.jpg",
+      "name": "Quạt mini chạy bằng pin",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Thiết bị",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    },
+    {
+      "src": "/assets/imgs/quat_tay.jpg",
+      "name": "Quạt tay phong cách kiểu dáng",
+      "quantity": 10,
+      "state": "tốt",
+      "tag": "Đồ trang trí",
+      "quantityInStock": 20,
+      "time": 10,
+
+      "description": " Khung bảng: được làm từ gỗ sồi với các đường vân tự nhiên, bên ngoài được sơn PU bóng giúp cho sản phẩm trở nên đẹp hơn và hoàn thiện hơn. Bảng gắn cố định trên tường bằng các đinh vít hoặc đặt trên giá."
+    }
+  ],
+  "account": [
+    {
+      "type": "admin",
+      "email": "admin123@hcmut.edu.vn",
+      "password": "123456789",
+      "name": "admin dep trai"
+    },
+    {
+      "type": "user",
+      "email": "user@hcmut.edu.vn",
+      "password": "987654321",
+      "name": "ahihihahahohohu"
+    }
+  ],
+  "listdata": [
+    {
+      "id": "#000000",
+      "timein": "11:00:00 18/02/2024",
+      "timeout": "11:00:00 05/03/2024",
+      "status": "Đã trả",
+      "email": "abc@hcmut.edu.vn",
+      "name": "Alice"
+    },
+    {
+      "id": "#000001",
+      "timein": "08:30:00 01/02/2024",
+      "timeout": "17:00:00 01/02/2024",
+      "status": "Đã trả",
+      "email": "xyz@example.com",
+      "name": "Bob"
+    },
+    {
+      "id": "#000002",
+      "timein": "09:15:00 05/02/2024",
+      "timeout": "16:45:00 05/02/2024",
+      "status": "Chưa trả",
+      "email": "def@example.com",
+      "name": "Charlie"
+    },
+    {
+      "id": "#000003",
+      "timein": "10:00:00 10/02/2024",
+      "timeout": "17:30:00 10/02/2024",
+      "status": "Đã trả",
+      "email": "ghi@example.com",
+      "name": "David"
+    },
+    {
+      "id": "#000004",
+      "timein": "08:45:00 15/02/2024",
+      "timeout": "16:15:00 15/02/2024",
+      "status": "Chưa trả",
+      "email": "jkl@example.com",
+      "name": "Emily"
+    },
+    {
+      "id": "#000005",
+      "timein": "07:30:00 20/02/2024",
+      "timeout": "15:00:00 20/02/2024",
+      "status": "Đã trả",
+      "email": "mno@example.com",
+      "name": "Frank"
+    },
+    {
+      "id": "#000006",
+      "timein": "09:00:00 25/02/2024",
+      "timeout": "16:30:00 25/02/2024",
+      "status": "Chưa trả",
+      "email": "pqr@example.com",
+      "name": "Grace"
+    },
+    {
+      "id": "#000007",
+      "timein": "10:30:00 01/03/2024",
+      "timeout": "18:00:00 01/03/2024",
+      "status": "Đã trả",
+      "email": "stu@example.com",
+      "name": "Henry"
+    },
+    {
+      "id": "#000008",
+      "timein": "08:15:00 05/03/2024",
+      "timeout": "15:45:00 05/03/2024",
+      "status": "Chưa trả",
+      "email": "vwx@example.com",
+      "name": "Isabel"
+    },
+    {
+      "id": "#000009",
+      "timein": "09:45:00 10/03/2024",
+      "timeout": "17:15:00 10/03/2024",
+      "status": "Đã trả",
+      "email": "yz@example.com",
+      "name": "Jack"
+    },
+    {
+      "id": "#000010",
+      "timein": "07:00:00 15/03/2024",
+      "timeout": "14:30:00 15/03/2024",
+      "status": "Chưa trả",
+      "email": "abc@example.com",
+      "name": "Katherine"
+    },
+    {
+      "id": "#000011",
+      "timein": "08:30:00 20/03/2024",
+      "timeout": "17:00:00 20/03/2024",
+      "status": "Đã trả",
+      "email": "ghi@example.com",
+      "name": "Alice"
+    },
+    {
+      "id": "#000012",
+      "timein": "09:15:00 25/03/2024",
+      "timeout": "16:45:00 25/03/2024",
+      "status": "Chưa trả",
+      "email": "jkl@example.com",
+      "name": "Bob"
+    },
+    {
+      "id": "#000013",
+      "timein": "10:00:00 30/03/2024",
+      "timeout": "17:30:00 30/03/2024",
+      "status": "Đã trả",
+      "email": "mno@example.com",
+      "name": "Charlie"
+    },
+    {
+      "id": "#000014",
+      "timein": "08:45:00 04/04/2024",
+      "timeout": "16:15:00 04/04/2024",
+      "status": "Chưa trả",
+      "email": "pqr@example.com",
+      "name": "David"
+    },
+    {
+      "id": "#000015",
+      "timein": "07:30:00 09/04/2024",
+      "timeout": "15:00:00 09/04/2024",
+      "status": "Đã trả",
+      "email": "stu@example.com",
+      "name": "Emma"
+    },
+    {
+      "id": "#000016",
+      "timein": "09:00:00 14/04/2024",
+      "timeout": "16:30:00 14/04/2024",
+      "status": "Chưa trả",
+      "email": "vwx@example.com",
+      "name": "Frank"
+    },
+    {
+      "id": "#000017",
+      "timein": "10:30:00 19/04/2024",
+      "timeout": "18:00:00 19/04/2024",
+      "status": "Đã trả",
+      "email": "yz@example.com",
+      "name": "Grace"
+    },
+    {
+      "id": "#000018",
+      "timein": "08:15:00 24/04/2024",
+      "timeout": "15:45:00 24/04/2024",
+      "status": "Chưa trả",
+      "email": "abc@example.com",
+      "name": "Henry"
+    },
+    {
+      "id": "#000019",
+      "timein": "09:45:00 29/04/2024",
+      "timeout": "17:15:00 29/04/2024",
+      "status": "Đã trả",
+      "email": "def@example.com",
+      "name": "Ivy"
+    },
+    {
+      "id": "#000020",
+      "timein": "07:00:00 04/05/2024",
+      "timeout": "14:30:00 04/05/2024",
+      "status": "Chưa trả",
+      "email": "ghi@example.com",
+      "name": "Jack"
+    }
+  ]
+}

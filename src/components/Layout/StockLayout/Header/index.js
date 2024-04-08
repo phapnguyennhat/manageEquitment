@@ -1,10 +1,25 @@
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
+
 import { Link } from "react-router-dom";
 import CartsDetail from "~/components/CartsDetail";
+import { useEffect, useState, useContext } from "react";
+import { DatabaseContext } from "~/App";
+
+import { getData } from "~/services/firebase";
 const cx = classNames.bind(styles);
 
-function Header({ carts, nameUser }) {
+function Header({ nameUser }) {
+  // const [carts, setCarts] = useState([]);
+  // useEffect(() => {
+  //   getData().then((response) => {
+  //     if (response) {
+  //       setCarts(response["Carts"] ?? []);
+  //     }
+  //   });
+  // }, []);
+  const data = useContext(DatabaseContext);
+  const carts = data.database.length === 0 ? [] : data.database["Carts"] ?? [];
   return (
     <div className={cx("header")}>
       <div className={cx("header__logo")}>
