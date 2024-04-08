@@ -238,6 +238,8 @@ margin-top:7%;
   padding: 10px;
   &:first-child{
     text-align: center;
+    width: 156px;
+    cursor: pointer;
   }
   &:nth-child(2){
     text-align: left;
@@ -245,6 +247,7 @@ margin-top:7%;
 
   &:last-child{
     text-align: center;
+    cursor: pointer;
   }
 }
 
@@ -300,6 +303,7 @@ margin-top:7%;
 .confirm-msg{
   color: #8a8a8a;
   font-size: 2rem;
+  margin-left: 6px;
 }
 
 .wrap-total{
@@ -319,5 +323,7 @@ margin-top:7%;
   padding: 6px 0px;
 }
 
-
+.med-font-size{
+  font-size: 1.6rem !important;
+}
 

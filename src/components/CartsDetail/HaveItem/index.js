@@ -16,7 +16,7 @@ function HaveItem({ carts }) {
             <CartsDetailItem
               src={item.src}
               name={item.name}
-              getSL={item.getSL}
+              getSl={item.getSl}
               key={index}
             />
           </li>

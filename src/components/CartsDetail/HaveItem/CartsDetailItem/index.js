@@ -3,7 +3,7 @@ import styles from "./CartsDetailItem.module.scss";
 
 const cx = classNames.bind(styles);
 
-function CartsDetailItem({ src, name, getSL }) {
+function CartsDetailItem({ src, name, getSl }) {
   return (
     <div className={cx("cart-item")}>
       <div className={cx("wrap-img")}>
@@ -12,7 +12,7 @@ function CartsDetailItem({ src, name, getSL }) {
       </div>
       <div className={cx("wrap-quantity")}>
         <span className={cx("cart-item-multi")}>x</span>
-        <span className={cx("cart-item-quantity")}>{getSL}</span>
+        <span className={cx("cart-item-quantity")}>{getSl}</span>
       </div>
     </div>
   );

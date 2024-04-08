@@ -1,24 +1,37 @@
 import classNames from "classnames/bind";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./Stock.module.scss";
 import Card from "~/components/Card";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { DatabaseContext } from "~/App";
+import { getData, writeUserData } from "~/services/firebase";
 
 const cx = classNames.bind(styles);
 function Stock(props) {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
+  // const data = useContext(DatabaseContext);
+
+  // // console.log("displayStock", data.database["Stockdb"]);
+
+  // const posts =
+  //   data.database.length === 0 ? [] : data.database["Stockdb"] ?? [];
+
   const [displayStock, setDisplayStock] = useState([]);
-  var postApi = "assets/databases/stockdb.json";
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const handleLoadingDone = () => {
+    setLoading(false);
+  };
+
   useEffect(() => {
-    fetch(postApi)
-      .then((response) => response.json())
-      .then((posts) => {
-        setPosts(posts);
-        return posts;
-      })
-      .then((posts) => {
-        setDisplayStock(posts);
-      });
+    getData().then((response) => {
+      setPosts(response["Stockdb"] ?? []);
+      setDisplayStock(response["Stockdb"] ?? []);
+      handleLoadingDone();
+    });
   }, []);
+
   const [selection, setSelection] = useState("Danh mục");
   const handleAll = () => {
     setDisplayStock(posts);
@@ -47,6 +60,13 @@ function Stock(props) {
 
   return (
     <div className={cx("container")}>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: 1 }}
+        open={loading}
+        onClick={handleLoadingDone}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <h3 className={cx("container__title")}>Kho</h3>
       <div className={cx("container__direction")}>
         <span>Trang chủ </span>
@@ -100,7 +120,7 @@ function Stock(props) {
 
         {/* card */}
         <div>
-          {displayStock.length === 0 && (
+          {/* {displayStock.length === 0 && (
             <div>
               <img
                 src="/assets/imgs/not_found.png"
@@ -111,7 +131,7 @@ function Stock(props) {
                 Hiện tại chưa có sản phẩm cho danh mục này 🥲🥲
               </div>
             </div>
-          )}
+          )} */}
         </div>
         <div className={cx("grid-card")}>
           {displayStock.map((item, index) => (

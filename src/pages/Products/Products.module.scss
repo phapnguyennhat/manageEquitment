@@ -4,6 +4,15 @@
   margin: auto;
 }
 
+.alert-error{
+  position: fixed;
+  right: 0;
+}
+
+.alert-error-item{
+  font-size: 1.4rem !important;
+}
+
 .title{
   font-size: 4rem;
   padding-top: 40px

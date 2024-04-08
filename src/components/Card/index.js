@@ -20,35 +20,35 @@ function Card(props) {
   //   return storageCarts ?? [];
   // });
 
-  const handleAdd = () => {
-    // const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
-    // setCarts(storageCarts);
+  // const handleAdd = () => {
+  //   // const storageCarts = JSON.parse(localStorage.getItem("carts")) ?? [];
+  //   // setCarts(storageCarts);
 
-    // // console.log(carts);
-    // // console.log(props);
-    // // console.log(carts.includes(props));
-    // console.log(carts);
+  //   // // console.log(carts);
+  //   // // console.log(props);
+  //   // // console.log(carts.includes(props));
+  //   // console.log(carts);
 
-    // setCarts((prev) => {
-    //   const newCarts = [...prev, { ...props, getSL: 0, check: false }];
-    //   const jsonCarts = JSON.stringify(newCarts);
-    //   localStorage.setItem("carts", jsonCarts);
-    //   return newCarts;
-    // });
-    const storageCarts = localStorage.getItem("carts");
-    var carts = storageCarts ? JSON.parse(storageCarts) : [];
-    var item = carts.find((item) => item.name === props.name);
-    var sl;
-    if (item) {
-      carts = carts.filter((item) => item.name !== props.name);
-      sl = item.getSL + 1;
-      carts = [...carts, { ...props, getSL: sl, check: false }];
-    } else {
-      carts = [...carts, { ...props, getSL: 1, check: false }];
-    }
-    props.setCarts(carts);
-    localStorage.setItem("carts", JSON.stringify(carts));
-  };
+  //   // setCarts((prev) => {
+  //   //   const newCarts = [...prev, { ...props, getSL: 0, check: false }];
+  //   //   const jsonCarts = JSON.stringify(newCarts);
+  //   //   localStorage.setItem("carts", jsonCarts);
+  //   //   return newCarts;
+  //   // });
+  //   const storageCarts = localStorage.getItem("carts");
+  //   var carts = storageCarts ? JSON.parse(storageCarts) : [];
+  //   var item = carts.find((item) => item.name === props.name);
+  //   var sl;
+  //   if (item) {
+  //     carts = carts.filter((item) => item.name !== props.name);
+  //     sl = item.getSL + 1;
+  //     carts = [...carts, { ...props, getSL: sl, check: false }];
+  //   } else {
+  //     carts = [...carts, { ...props, getSL: 1, check: false }];
+  //   }
+  //   props.setCarts(carts);
+  //   localStorage.setItem("carts", JSON.stringify(carts));
+  // };
 
   return (
     <div
